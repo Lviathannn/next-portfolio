@@ -1,4 +1,5 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
 import Link from "next/link";
 import {
   AlignLeft,
@@ -10,6 +11,8 @@ import {
   Phone,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { NavMenu } from "./NavMenu";
 
 type Props = {};
 
@@ -55,43 +58,50 @@ const links: LinksType = [
 
 export default function Navbar({}: Props) {
   return (
-    <nav className="px-container fixed top-0 z-20 flex w-full justify-between bg-primary/50 py-5 text-white backdrop-blur-xl">
-      <div className="">Navbar</div>
-      <Sheet>
-        <SheetTrigger>
-          <AlignLeft />
-        </SheetTrigger>
-        <SheetContent>
-          <ul className="flex flex-col gap-7">
-            {links.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.href}
-                  className={`flex items-center gap-5 text-lg text-white`}
-                >
-                  <div
-                    className={cn(
-                      `flex h-11 w-11 items-center justify-center rounded-full border-2 text-white ${
-                        link.isActive
-                          ? " bg-white text-primary"
-                          : " bg-primary "
-                      }}`,
-                    )}
+    <nav className="px-container fixed top-0 z-20 flex w-full justify-between bg-primary/50 py-3 text-white backdrop-blur-xl">
+      <div className="flex items-center justify-center">
+        <Image src={"/navlogo.svg"} alt="Navbar Logo" width={70} height={70} />
+      </div>
+      <div className="lg:hidden">
+        <Sheet>
+          <SheetTrigger>
+            <AlignLeft />
+          </SheetTrigger>
+          <SheetContent>
+            <ul className="flex flex-col gap-7">
+              {links.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className={`flex items-center gap-5 text-lg text-white`}
                   >
-                    <link.Icon
-                      size={18}
+                    <div
                       className={cn(
-                        `${link.isActive ? "text-primary" : "text-white"}`,
+                        `flex h-11 w-11 items-center justify-center rounded-full border-2 text-white ${
+                          link.isActive
+                            ? " bg-white text-primary"
+                            : " bg-primary "
+                        }}`,
                       )}
-                    />
-                  </div>
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </SheetContent>
-      </Sheet>
+                    >
+                      <link.Icon
+                        size={18}
+                        className={cn(
+                          `${link.isActive ? "text-primary" : "text-white"}`,
+                        )}
+                      />
+                    </div>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </SheetContent>
+        </Sheet>
+      </div>
+      <div className="hidden lg:block">
+        <NavMenu />
+      </div>
     </nav>
   );
 }
