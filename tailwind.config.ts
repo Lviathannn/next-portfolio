@@ -23,6 +23,9 @@ module.exports = {
         accent_2: "#586856",
         accent_3: "#314abb",
       },
+      fontFamily: {
+        firacode: ["var(--firaCode)"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
