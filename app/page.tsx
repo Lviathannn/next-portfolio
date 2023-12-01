@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
         <div className="relative z-10 flex w-full flex-col items-center justify-between gap-20 lg:flex-row">
           {/* Hero Title */}
           <div className="w-full ">
-            <h1 className="text-[60px] font-extrabold leading-none text-white md:text-[64px] lg:text-[80px]">
+            <h1 className="text-[55px] font-extrabold leading-none text-white sm:text-[60px] md:text-[64px] lg:text-[80px]">
               Hello,
               <br />
               I’m Asrul{" "}
@@ -40,11 +41,45 @@ export default function Home() {
                 <ArrowRight size={12} className="text-accent_3 " />
                 asrul ~
               </p>
-              <p className=" text-sm font-light text-secondary">
-                nextjs 14.0.3
+              <p className=" flex items-center gap-2 text-sm font-light text-secondary">
+                <span className="flex h-4 w-4 items-center justify-center rounded-full border border-secondary text-xs">
+                  N
+                </span>{" "}
+                14.0.3
               </p>
             </div>
           </div>
+        </div>
+        {/* Built With */}
+        <div className="mt-28 flex flex-wrap justify-evenly gap-x-10">
+          <Image
+            src={"/nextjs.svg"}
+            alt="Next JS Logo"
+            width={400}
+            height={400}
+            className=" w-[110px] opacity-30"
+          />
+          <Image
+            src={"/tailwind.svg"}
+            alt="Tailwind CSS Logo"
+            width={400}
+            height={400}
+            className="w-[200px] opacity-30"
+          />
+          <Image
+            src={"/shadcn.svg"}
+            alt="Shadcn UI Logo"
+            width={400}
+            height={400}
+            className="w-[60px] opacity-30 "
+          />
+          <Image
+            src={"/framer.svg"}
+            alt="Framer Motion Logo"
+            width={400}
+            height={400}
+            className="w-[190px] opacity-30"
+          />
         </div>
         {/* Blob */}
         <div className="absolute -left-10 top-0 h-52 w-52 animate-scale rounded-full bg-secondary blur-[90px]" />
