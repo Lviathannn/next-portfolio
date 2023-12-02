@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.terminal {
-  @apply font-firacode relative h-96 w-full rounded-xl border-2 bg-primary/40 px-3 backdrop-blur-lg;
-}
-
 .px-container {
   @apply px-5 sm:px-10 md:px-20 xl:px-28;
 }
@@ -15,7 +11,19 @@
 }
 
 *::-webkit-scrollbar {
-  @apply hidden;
+  @apply w-[0px];
+}
+
+#terminal::-webkit-scrollbar {
+  @apply w-[5px];
+}
+
+#terminal::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+#terminal::-webkit-scrollbar-thumb {
+  @apply bg-secondary;
 }
 
 .wave {
