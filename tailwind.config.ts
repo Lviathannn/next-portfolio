@@ -36,8 +36,8 @@ module.exports = {
           to: { height: 0 },
         },
         scaleUp: {
-          "0%, 100%": { transform: "scale(1)", opacity: 0.6 },
-          "50%": { transform: "scale(1.2) ", opacity: 1 },
+          "0%, 100%": { transform: "scale(1)", opacity: 1 },
+          "50%": { transform: "scale(1.2) ", opacity: 0.2 },
         },
       },
       animation: {

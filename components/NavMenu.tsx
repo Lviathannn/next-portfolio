@@ -45,7 +45,7 @@ export function NavMenu() {
         </NavigationMenuItem>
         <NavigationMenuItem className="">
           <NavigationMenuTrigger>About Me</NavigationMenuTrigger>
-          <NavigationMenuContent className="max-w-xs bg-primary">
+          <NavigationMenuContent className="max-w-xs dark:bg-primary">
             <ul className="flex max-w-xs flex-col gap-5 p-2">
               {components.map((component) => (
                 <Link href={component.href} key={component.title}>

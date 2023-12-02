@@ -25,7 +25,7 @@ export default function Home() {
               Transforming Pixels into Poetry, Conjuring Captivating Web
               Journeys as a Front-End Wizard
             </p>
-            <Button className="mt-5 bg-secondary text-primary hover:bg-accent_1 dark:bg-secondary dark:hover:bg-accent_1">
+            <Button className="mt-5 bg-secondary text-black shadow-2xl hover:bg-accent_1 dark:bg-secondary dark:hover:bg-accent_1">
               Explore
             </Button>
           </div>
@@ -51,38 +51,40 @@ export default function Home() {
           </div>
         </div>
         {/* Built With */}
-        <div className="mt-28 flex flex-wrap justify-evenly gap-x-10">
+        <div className="z-10 mt-28 flex flex-wrap justify-evenly gap-x-10">
           <Image
             src={"/nextjs.svg"}
             alt="Next JS Logo"
-            width={400}
-            height={400}
-            className=" w-[110px] opacity-30"
+            width={120}
+            height={120}
+            className="aspect-video w-[100px] object-contain opacity-30 sm:w-[120px] md:w-[150px]"
           />
           <Image
             src={"/tailwind.svg"}
             alt="Tailwind CSS Logo"
-            width={400}
-            height={400}
-            className="w-[200px] opacity-30"
+            width={180}
+            height={180}
+            className="aspect-video w-[120px] object-contain opacity-30  sm:w-[150px] md:w-[175px] lg:w-[200px]"
           />
           <Image
             src={"/shadcn.svg"}
             alt="Shadcn UI Logo"
-            width={400}
-            height={400}
-            className="w-[60px] opacity-30 "
+            width={180}
+            height={180}
+            className="aspect-video w-[120px] object-contain opacity-30  sm:w-[150px] md:w-[175px] lg:w-[200px] "
           />
           <Image
             src={"/framer.svg"}
             alt="Framer Motion Logo"
-            width={400}
-            height={400}
-            className="w-[190px] opacity-30"
+            width={180}
+            height={180}
+            className="aspect-video w-[120px] object-contain opacity-30  sm:w-[150px] md:w-[175px] lg:w-[200px]"
           />
         </div>
         {/* Blob */}
-        <div className="absolute -left-10 top-0 h-52 w-52 animate-scale rounded-full bg-secondary blur-[90px]" />
+        <div className="absolute -left-10 top-0 -z-30 h-52 w-52 animate-scale rounded-full bg-secondary blur-[90px] " />
+        <div className="absolute bottom-10 right-60 -z-30 h-44 w-44 animate-scale rounded-full bg-secondary blur-[60px] md:-bottom-44 md:right-96 md:h-64 md:w-64 lg:bottom-40" />
+        <div className="absolute -bottom-20 right-10 -z-30 h-44 w-44 animate-scale rounded-full bg-accent_1 blur-[60px] delay-1000 md:bottom-0 md:right-44 md:h-64 md:w-64 lg:bottom-72" />
       </section>
     </main>
   );
