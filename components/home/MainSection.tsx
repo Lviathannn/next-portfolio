@@ -7,7 +7,7 @@ type Props = {};
 
 export default function MainSection({}: Props) {
   return (
-    <section className="w-full pt-20">
+    <section className="relative w-full pt-20">
       <div className="relative z-10 flex w-full flex-col items-center justify-between gap-20 lg:flex-row">
         {/* Hero Title */}
         <div className="w-full ">
@@ -65,9 +65,8 @@ export default function MainSection({}: Props) {
         />
       </div>
       {/* Blob */}
-
       <Blob className="-left-20 -top-10 h-64 w-64 bg-secondary blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
-      <Blob className="-bottom-20 -right-20 h-64 w-64 bg-accent_1 blur-[90px] lg:-right-60 lg:bottom-20 lg:h-96 lg:w-96 lg:blur-[120px]" />
+      <Blob className="-right-20 bottom-40 h-64 w-64 bg-accent_1 blur-[90px] lg:-right-60 lg:bottom-20 lg:h-96 lg:w-96 lg:blur-[120px]" />
     </section>
   );
 }
