@@ -14,7 +14,7 @@ export default function TerminalHeader({ customStyles = "" }: Props) {
     >
       <p className="flex items-center gap-1 text-sm text-secondary">
         <ArrowRight size={15} className="text-accent_3 " />
-        asrul ~
+        asrul@<span className="text-accent_3">next</span>~
       </p>
       <p className=" flex items-center gap-2 text-sm font-light text-secondary">
         <span className="flex h-4 w-4 items-center justify-center rounded-full border border-secondary text-xs">

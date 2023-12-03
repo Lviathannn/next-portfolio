@@ -10,7 +10,7 @@ export default function Footer({}: Props) {
     <footer className="px-container relative z-10 flex flex-col gap-10 bg-primary/70 py-10 text-white  lg:py-14">
       <div className=" flex flex-col justify-between gap-10 md:flex-row">
         <div className="flex flex-col">
-          <h2 className="text-primary-text text-xl text-secondary">
+          <h2 className="text-primary-text text-xl font-semibold text-secondary">
             Muhammad Asrul Rifa Anwar
           </h2>
           <h3 className="text-primary-text text-medium font-light">

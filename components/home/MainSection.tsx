@@ -66,7 +66,7 @@ export default function MainSection({}: Props) {
       </div>
       {/* Blob */}
       <Blob className="-left-20 -top-10 h-64 w-64 bg-secondary blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
-      <Blob className="-right-20 bottom-40 h-64 w-64 bg-accent_1 blur-[90px] lg:-right-60 lg:bottom-20 lg:h-96 lg:w-96 lg:blur-[120px]" />
+      <Blob className="-right-20 bottom-64 h-64 w-64 bg-accent_1 blur-[90px] delay-1000 lg:-right-60 lg:bottom-40 lg:h-96 lg:w-96 lg:blur-[120px]" />
     </section>
   );
 }
