@@ -5,6 +5,8 @@ import TerminalHelp from "./TerminalHelp";
 import TerminalSkills from "./TerminalSkills";
 import TerminalHeader from "./TerminalHeader";
 import { useState } from "react";
+import TerminalProjects from "./TerminalProjects";
+import TerminalContact from "./TerminalContact";
 
 interface OutputItem {
   content: string | React.ReactNode;
@@ -28,26 +30,36 @@ const Terminal: React.FC = () => {
   };
 
   const processCommand = () => {
-    const [command, ...args] = input.split(" ");
-
     let newOutput: OutputItem[] = [...output];
 
-    switch (command.toLowerCase()) {
+    switch (input.toLowerCase()) {
       case "help":
         newOutput.push({
           content: <TerminalHelp />,
           id: Date.now(),
         });
         break;
-      case "about":
+      case "next about":
         newOutput.push({
           content: <TerminalAbout />,
           id: Date.now(),
         });
         break;
-      case "skills":
+      case "next skills":
         newOutput.push({
           content: <TerminalSkills />,
+          id: Date.now(),
+        });
+        break;
+      case "next projects":
+        newOutput.push({
+          content: <TerminalProjects />,
+          id: Date.now(),
+        });
+        break;
+      case "next contact":
+        newOutput.push({
+          content: <TerminalContact />,
           id: Date.now(),
         });
         break;
@@ -56,11 +68,12 @@ const Terminal: React.FC = () => {
         break;
       default:
         newOutput.push({
-          content: `Command not found: ${command}`,
-          id: Date.now(),
-        });
-        newOutput.push({
-          content: 'Type "help" for a list of available commands',
+          content: (
+            <div className="">
+              <p>Command not found: {input}</p>
+              <p>Type {`"next help"`} for a list of available commands</p>
+            </div>
+          ),
           id: Date.now(),
         });
     }
@@ -98,7 +111,7 @@ const Terminal: React.FC = () => {
             type="text"
             value={input}
             onChange={handleInputChange}
-            onKeyPress={handleEnter}
+            onKeyDown={handleEnter}
             className="w-full border-none bg-transparent text-white outline-none"
           />
         </div>
