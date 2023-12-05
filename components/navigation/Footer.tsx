@@ -1,13 +1,11 @@
+import { menuItems, socials } from "@/lib/dummy";
 import Link from "next/link";
 
 type Props = {};
 
 export default function Footer({}: Props) {
-  const menuItems = ["Home", "About", "Skills", "Projects", "Contact"];
-  const socials = ["Github", "LinkedIn", "Instagram", "Youtube"];
-
   return (
-    <footer className="px-container relative z-10 flex flex-col gap-10 bg-primary/70 py-10 text-white  lg:py-14">
+    <footer className="px-container relative z-20 flex flex-col gap-10 bg-primary/20 py-10 text-white  lg:py-14">
       <div className=" flex flex-col justify-between gap-10 md:flex-row">
         <div className="flex flex-col">
           <h2 className="text-primary-text text-xl font-semibold text-secondary">
@@ -19,28 +17,31 @@ export default function Footer({}: Props) {
         </div>
         <div className="flex flex-col gap-3">
           <h2 className="text-primary-text text-xl">Navigations</h2>
-          <div className="text-primary-text flex flex-col gap-1 font-light">
+          <div className="text-primary-text flex flex-col gap-3 font-light">
             {menuItems.map((item, index) => (
               <Link
-                className="cursor-pointer font-normal hover:text-secondary"
-                href={`/${item.toLowerCase()}`}
+                className="flex cursor-pointer items-center gap-2 font-normal hover:text-secondary"
+                href={`/${item.href.toLowerCase()}`}
                 key={index}
               >
-                {item}
+                <item.Icon size={16} />
+                {item.name}
               </Link>
             ))}
           </div>
         </div>
         <div className="flex flex-col gap-3">
           <h2 className="text-primary-text text-xl">Social Media</h2>
-          <div className="text-primary-text flex flex-col gap-1 font-light">
+          <div className="text-primary-text flex flex-col gap-3 font-light">
             {socials.map((item, index) => (
               <Link
-                className="cursor-pointer font-normal hover:text-secondary"
-                href={`/${item.toLowerCase()}`}
+                className="flex cursor-pointer items-center gap-2 font-normal hover:text-secondary"
+                href={`${item.href.toLowerCase()}`}
                 key={index}
+                target="_blank"
               >
-                {item}
+                <item.Icon size={16} />
+                {item.name}
               </Link>
             ))}
           </div>

@@ -9,7 +9,7 @@ export default function TerminalProjects({}: Props) {
       <ul>
         <li>
           <Link
-            href="https://muhammadasrulrifa.vercel.app/"
+            href="https://muhammadasrul-v1.vercel.app/"
             target="_blank"
             className="hover:text-secondary"
           >

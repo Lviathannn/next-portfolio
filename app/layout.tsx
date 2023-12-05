@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Poppins, Fira_Code } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/navigation/Navbar";
+import Footer from "@/components/navigation/Footer";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -37,7 +37,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
-        <div className="fixed bottom-0 left-0 right-0 top-0 z-0 bg-[url('/grid.svg')] opacity-[15%]" />
+        <div className="fixed bottom-0 left-0 right-0 top-0 -z-10 bg-[url('/grid.svg')] opacity-[15%]" />
         <Footer />
       </body>
     </html>
