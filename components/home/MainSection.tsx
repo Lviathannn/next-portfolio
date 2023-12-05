@@ -7,7 +7,7 @@ type Props = {};
 
 export default function MainSection({}: Props) {
   return (
-    <section className="relative w-full pt-20">
+    <section className="relative w-full">
       <div className="relative z-10 flex w-full flex-col items-center justify-between gap-20 lg:flex-row">
         {/* Hero Title */}
         <div className="w-full ">
