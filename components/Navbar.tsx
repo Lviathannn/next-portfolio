@@ -1,67 +1,71 @@
+"use client";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 import Link from "next/link";
-import {
-  AlignLeft,
-  Home,
-  LucideIcon,
-  Coffee,
-  Code2,
-  Terminal,
-  Phone,
-} from "lucide-react";
+import { AlignLeft, Home, Coffee, Code2, Terminal, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { NavMenu } from "./NavMenu";
+import { useEffect, useState } from "react";
+import { LinksType } from "@/types/type";
 
 type Props = {};
-
-type LinksType = {
-  name: string;
-  href: string;
-  Icon: LucideIcon;
-  isActive?: boolean;
-}[];
 
 const links: LinksType = [
   {
     name: "Home",
     href: "/",
     Icon: Home,
-    isActive: true,
   },
   {
     name: "About",
     href: "/about",
     Icon: Coffee,
-    isActive: false,
   },
   {
     name: "Skill",
     href: "/skill",
     Icon: Code2,
-    isActive: false,
   },
   {
     name: "Projects",
     href: "/projects",
     Icon: Terminal,
-    isActive: false,
   },
   {
     name: "Contact",
     href: "/contact",
     Icon: Phone,
-    isActive: false,
   },
 ];
 
 export default function Navbar({}: Props) {
+  const [isAtTop, setIsAtTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY === 0);
+    };
+
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="px-container fixed top-0 z-20 flex w-full justify-between bg-primary/50 py-3 text-white backdrop-blur-xl">
-      <div className="flex items-center justify-center">
-        <Image src={"/navlogo.svg"} alt="Navbar Logo" width={70} height={70} />
-      </div>
+    <nav
+      className={cn(
+        `px-container fixed top-0 z-20 flex w-full justify-between  py-3 text-white transition-colors duration-700 ${
+          isAtTop ? "bg-transparent" : "bg-primary/80 backdrop-blur-xl "
+        }}`,
+      )}
+    >
+      <Link href={"/"} className="relative flex items-center justify-center">
+        <h2 className="text-xl font-semibold before:absolute before:-left-1 before:-z-30 before:h-3 before:w-3 before:rounded-full before:bg-secondary">
+          Asrul
+        </h2>
+        <span className="font-bold text-secondary">.()</span>
+      </Link>
       <div className="lg:hidden">
         <Sheet>
           <SheetTrigger>
@@ -77,19 +81,10 @@ export default function Navbar({}: Props) {
                   >
                     <div
                       className={cn(
-                        `flex h-11 w-11 items-center justify-center rounded-full border-2 text-white ${
-                          link.isActive
-                            ? " bg-white text-primary"
-                            : " bg-primary "
-                        }}`,
+                        `flex h-11 w-11 items-center justify-center rounded-full border-2 text-white`,
                       )}
                     >
-                      <link.Icon
-                        size={18}
-                        className={cn(
-                          `${link.isActive ? "text-primary" : "text-white"}`,
-                        )}
-                      />
+                      <link.Icon size={18} className={cn("")} />
                     </div>
                     {link.name}
                   </Link>

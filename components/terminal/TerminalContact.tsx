@@ -12,7 +12,7 @@ type Props = {};
 export default function TerminalContact({}: Props) {
   return (
     <div className="mb-4">
-      <h6 className="mb-2 text-secondary">Projects :</h6>
+      <h6 className="mb-2 text-secondary">Contact :</h6>
       <ul>
         <li>
           <Link
@@ -20,8 +20,8 @@ export default function TerminalContact({}: Props) {
             target="_blank"
             className="flex items-center gap-2 hover:text-secondary"
           >
-            <p>Whatsapp</p>
             <PhoneIcon size={15} />
+            <p>Whatsapp</p>
           </Link>
         </li>
         <li>
@@ -30,8 +30,8 @@ export default function TerminalContact({}: Props) {
             target="_blank"
             className="flex items-center gap-2 hover:text-secondary"
           >
-            <p>Instagram</p>
             <InstagramIcon size={15} />
+            <p>Instagram</p>
           </Link>
         </li>
         <li>
@@ -40,8 +40,8 @@ export default function TerminalContact({}: Props) {
             target="_blank"
             className="flex items-center gap-2 hover:text-secondary"
           >
-            <p>LinkedIn</p>
             <LinkedinIcon size={15} />
+            <p>LinkedIn</p>
           </Link>
         </li>
         <li>
@@ -50,8 +50,8 @@ export default function TerminalContact({}: Props) {
             target="_blank"
             className="flex items-center gap-2 hover:text-secondary"
           >
-            <p>Github</p>
             <GithubIcon size={15} />
+            <p>Github</p>
           </Link>
         </li>
       </ul>
