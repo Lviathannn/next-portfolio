@@ -1,7 +1,7 @@
-import Terminal from "@/components/terminal/Terminal";
+import Terminal from "@/components/home/terminal/Terminal";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Blob from "../Blob";
+import Blob from "../ui/Blob";
 
 type Props = {};
 

@@ -6,6 +6,7 @@ import {
   Home,
   Instagram,
   Linkedin,
+  LucideIcon,
   Phone,
   Terminal,
   Youtube,
@@ -61,18 +62,7 @@ export const socials: LinksType = [
   },
 ];
 
-export const skillsData = [
-  { title: "HTML 5", logo: "html.webp" },
-  { title: "CSS 3", logo: "css-3.webp" },
-  { title: "SASS", logo: "sass.webp" },
-  { title: "JavaScript", logo: "js.webp" },
-  { title: "TypeScript", logo: "typescript.webp" },
-  { title: "Tailwind CSS", logo: "tailwindcss.webp" },
-  { title: "FlowBite", logo: "flowbite.svg" },
-  { title: "Framer Motion", logo: "framermotion.svg" },
-  { title: "React JS", logo: "react.svg" },
-  { title: "Redux Toolkit", logo: "redux.svg" },
-  { title: "Next JS", logo: "next.svg" },
+export const skillsTools = [
   { title: "VS Code", logo: "vscode.webp" },
   { title: "Figma", logo: "figma.webp" },
   { title: "Vite JS", logo: "vite.svg" },
@@ -80,4 +70,47 @@ export const skillsData = [
   { title: "GitHub", logo: "github.webp" },
   { title: "Netlify", logo: "netlify-icon.svg" },
   { title: "NPM", logo: "npm.webp" },
+];
+
+export const skillsLanguage = [
+  { title: "HTML 5", logo: "html.webp" },
+  { title: "CSS 3", logo: "css-3.webp" },
+  { title: "SASS", logo: "sass.webp" },
+  { title: "JavaScript", logo: "js.webp" },
+  { title: "TypeScript", logo: "typescript.webp" },
+];
+
+export const skillsLibrary = [
+  { title: "Tailwind CSS", logo: "tailwindcss.webp" },
+  { title: "FlowBite", logo: "flowbite.svg" },
+  { title: "Framer Motion", logo: "framermotion.svg" },
+  { title: "React JS", logo: "react.svg" },
+  { title: "Redux Toolkit", logo: "redux.svg" },
+  { title: "Next JS", logo: "next.svg" },
+];
+
+export const aboutLinks: {
+  title: string;
+  href: string;
+  description: string;
+  Icon: LucideIcon;
+}[] = [
+  {
+    title: "About Me",
+    href: "/about",
+    description: "Everything about me",
+    Icon: Coffee,
+  },
+  {
+    title: "Skills",
+    href: "/skills",
+    description: "Technologies I can use",
+    Icon: Code2,
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+    description: "All projects I have worked on",
+    Icon: Terminal,
+  },
 ];

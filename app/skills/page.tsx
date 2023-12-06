@@ -1,6 +1,6 @@
-import Blob from "@/components/Blob";
-import SectionTitle from "@/components/SectionTitle";
+import Blob from "@/components/ui/Blob";
 import SkillsTabs from "@/components/skills/SkillsTabs";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 type Props = {};
 
