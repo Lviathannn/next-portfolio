@@ -38,6 +38,7 @@ export default function Navbar({}: Props) {
         </h2>
         <span className="font-bold text-secondary">.()</span>
       </Link>
+      {/* Mobile */}
       <div className="lg:hidden">
         <Sheet>
           <SheetTrigger>
@@ -66,6 +67,7 @@ export default function Navbar({}: Props) {
           </SheetContent>
         </Sheet>
       </div>
+      {/* Dekstop */}
       <div className="hidden lg:block">
         <NavMenu />
       </div>

@@ -5,7 +5,7 @@ type Props = {};
 
 export default function Footer({}: Props) {
   return (
-    <footer className="px-container relative z-20 flex flex-col gap-10 bg-primary/20 py-10 text-white  lg:py-14">
+    <footer className="px-container relative z-20 flex flex-col gap-10 bg-primary/20 py-10 text-white  backdrop-blur-md lg:py-14">
       <div className=" flex flex-col justify-between gap-10 md:flex-row">
         <div className="flex flex-col">
           <h2 className="text-primary-text text-xl font-semibold text-secondary">
@@ -21,7 +21,7 @@ export default function Footer({}: Props) {
             {menuItems.map((item, index) => (
               <Link
                 className="flex cursor-pointer items-center gap-2 font-normal hover:text-secondary"
-                href={`/${item.href.toLowerCase()}`}
+                href={`${item.href}`}
                 key={index}
               >
                 <item.Icon size={16} />
@@ -36,7 +36,7 @@ export default function Footer({}: Props) {
             {socials.map((item, index) => (
               <Link
                 className="flex cursor-pointer items-center gap-2 font-normal hover:text-secondary"
-                href={`${item.href.toLowerCase()}`}
+                href={`${item.href}`}
                 key={index}
                 target="_blank"
               >

@@ -1,28 +1,51 @@
-import { skillsData } from "@/lib/dummy";
-import Image from "next/image";
+"use client";
+import { useState } from "react";
+import SkillsLanguage from "./SkillsLanguage";
+import SkillsLibrary from "./SkillsLibrary";
+import SkillsTools from "./SkillsTools";
+import { Button } from "../ui/button";
 
 type Props = {};
 
 export default function SkillsTabs({}: Props) {
+  const [active, setActive] = useState<"language" | "library" | "tools">(
+    "language",
+  );
   return (
-    <div className="mx-auto grid w-full grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 xl:grid-cols-4">
-      {skillsData.map((skill) => (
-        <div
-          className=" z-10 flex flex-col items-center justify-center rounded-md bg-primary px-5 py-10 backdrop-blur-xl dark:bg-gray-900/10 sm:py-14 md:py-20"
-          key={skill.title}
+    <div className="flex w-full flex-col items-center gap-10">
+      <div className="dark:bg-dark/20 flex w-full max-w-full items-center space-x-1 rounded-xl p-1 backdrop-blur-sm lg:w-[50%]">
+        <Button
+          className={`w-full rounded-xl !bg-transparent py-6  text-sm font-medium !text-white ${
+            active === "language" && "!bg-secondary/70"
+          }`}
+          onClick={() => setActive("language")}
         >
-          <Image
-            src={`/${skill.logo}`}
-            width={90}
-            height={90}
-            alt={skill.title}
-            className="h-20 w-20"
-          />
-          <h3 className="mt-5 text-center text-xl font-semibold text-white">
-            {skill.title}
-          </h3>
-        </div>
-      ))}
+          Language
+        </Button>
+        <Button
+          className={`w-full rounded-xl !bg-transparent py-6  text-sm font-medium !text-white ${
+            active === "library" && "!bg-secondary/70"
+          }`}
+          onClick={() => setActive("library")}
+        >
+          Library
+        </Button>
+        <Button
+          className={`w-full rounded-xl !bg-transparent py-6  text-sm font-medium !text-white ${
+            active === "tools" && "!bg-secondary/70"
+          }`}
+          onClick={() => setActive("tools")}
+        >
+          Tools
+        </Button>
+      </div>
+      {active === "language" ? (
+        <SkillsLanguage />
+      ) : active === "library" ? (
+        <SkillsLibrary />
+      ) : (
+        <SkillsTools />
+      )}
     </div>
   );
 }

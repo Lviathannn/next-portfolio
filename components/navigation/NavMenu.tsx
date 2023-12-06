@@ -1,9 +1,6 @@
-"use client";
-
 import * as React from "react";
 import Link from "next/link";
 
-import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,24 +10,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "About Me",
-    href: "/about",
-    description: "Everything about me",
-  },
-  {
-    title: "Skills",
-    href: "/skills",
-    description: "Technologies I can use",
-  },
-  {
-    title: "Projects",
-    href: "/projects",
-    description: "All projects I have worked on",
-  },
-];
+import { aboutLinks } from "@/lib/dummy";
 
 export function NavMenu() {
   return (
@@ -47,13 +27,16 @@ export function NavMenu() {
           <NavigationMenuTrigger>About Me</NavigationMenuTrigger>
           <NavigationMenuContent className="max-w-xs dark:bg-primary">
             <ul className="flex max-w-xs flex-col gap-5 p-2">
-              {components.map((component) => (
-                <Link href={component.href} key={component.title}>
-                  <li className="w-[200px] rounded-md bg-transparent p-2 hover:bg-slate-800">
-                    <h3 className="text-sm font-semibold">{component.title}</h3>
-                    <p className="line-clamp-2 max-w-xs text-xs">
-                      {component.description}
-                    </p>
+              {aboutLinks.map((link) => (
+                <Link href={link.href} key={link.title}>
+                  <li className="hover:bg-dark flex w-[200px] items-center gap-3 rounded-md bg-transparent p-2">
+                    <link.Icon size={25} />
+                    <div className="">
+                      <h3 className="text-sm font-semibold">{link.title}</h3>
+                      <p className="line-clamp-2 max-w-xs text-xs">
+                        {link.description}
+                      </p>
+                    </div>
                   </li>
                 </Link>
               ))}
