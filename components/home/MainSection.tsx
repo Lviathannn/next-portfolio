@@ -47,21 +47,21 @@ export default function MainSection({}: Props) {
           alt="Tailwind CSS Logo"
           width={180}
           height={180}
-          className="aspect-video w-[120px] object-contain opacity-30  sm:w-[150px] md:w-[175px] lg:w-[200px]"
+          className="aspect-video w-[190px] object-contain opacity-30  sm:w-[220px] "
         />
         <Image
           src={"/shadcn.svg"}
           alt="Shadcn UI Logo"
           width={180}
           height={180}
-          className="aspect-video w-[120px] object-contain opacity-30  sm:w-[150px] md:w-[175px] lg:w-[200px] "
+          className="aspect-video w-[190px] object-contain opacity-30  sm:w-[220px]  "
         />
         <Image
           src={"/framer.svg"}
           alt="Framer Motion Logo"
           width={180}
           height={180}
-          className="aspect-video w-[120px] object-contain opacity-30  sm:w-[150px] md:w-[175px] lg:w-[200px]"
+          className="aspect-video w-[190px] object-contain opacity-30  sm:w-[220px] "
         />
       </div>
       {/* Blob */}
