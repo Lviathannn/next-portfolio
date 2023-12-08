@@ -12,7 +12,7 @@ type Props = {};
 
 export default function Navbar({}: Props) {
   const [isAtTop, setIsAtTop] = useState<boolean>(true);
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
 
   const pathname = usePathname();
 
@@ -22,6 +22,7 @@ export default function Navbar({}: Props) {
     };
     document.addEventListener("scroll", handleScroll);
     setIsOpen(false);
+
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
