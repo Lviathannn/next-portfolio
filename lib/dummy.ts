@@ -7,7 +7,6 @@ import {
   Instagram,
   Linkedin,
   LucideIcon,
-  Phone,
   Terminal,
   Youtube,
 } from "lucide-react";
@@ -32,11 +31,6 @@ export const menuItems: LinksType = [
     name: "Projects",
     href: "/projects",
     Icon: Terminal,
-  },
-  {
-    name: "Contact",
-    href: "/contact",
-    Icon: Phone,
   },
 ];
 export const socials: LinksType = [

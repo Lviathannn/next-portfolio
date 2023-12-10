@@ -2,6 +2,7 @@ import Terminal from "@/components/home/terminal/Terminal";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Blob from "../ui/Blob";
+import { Download } from "lucide-react";
 
 type Props = {};
 
@@ -26,8 +27,9 @@ export default function MainSection({}: Props) {
             Transforming Pixels into Poetry, Conjuring Captivating Web Journeys
             as a Front-End Wizard
           </p>
-          <Button className="mt-5 bg-secondary text-black shadow-2xl hover:bg-accent_1 dark:bg-secondary dark:hover:bg-accent_1">
-            Explore
+          <Button className="mt-5 flex items-center gap-2 bg-secondary !text-dark shadow-2xl hover:bg-accent_1 dark:bg-secondary dark:hover:bg-accent_1">
+            Download CV
+            <Download size={18} />
           </Button>
         </div>
         {/* Terminal */}
@@ -40,28 +42,28 @@ export default function MainSection({}: Props) {
           alt="Next JS Logo"
           width={120}
           height={120}
-          className="aspect-video w-[100px] object-contain opacity-30 sm:w-[120px] md:w-[150px]"
+          className="aspect-video w-[80px] object-contain opacity-30 sm:w-[120px] md:w-[150px]"
         />
         <Image
           src={"/tailwind.svg"}
           alt="Tailwind CSS Logo"
           width={180}
           height={180}
-          className="aspect-video w-[190px] object-contain opacity-30  sm:w-[220px] "
+          className="aspect-video w-[150px] object-contain opacity-30  sm:w-[220px] "
         />
         <Image
           src={"/shadcn.svg"}
           alt="Shadcn UI Logo"
           width={180}
           height={180}
-          className="aspect-video w-[190px] object-contain opacity-30  sm:w-[220px]  "
+          className="aspect-video w-[130px] object-contain opacity-30  sm:w-[220px]  "
         />
         <Image
           src={"/framer.svg"}
           alt="Framer Motion Logo"
           width={180}
           height={180}
-          className="aspect-video w-[190px] object-contain opacity-30  sm:w-[220px] "
+          className="aspect-video w-[130px] object-contain opacity-30  sm:w-[220px] "
         />
       </div>
       {/* Blob */}
