@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Badge } from "../ui/badge";
-import Link from "next/link";
 import { Github, Link2 } from "lucide-react";
+import Link from "next/link";
 
 type Props = {
   title: string;
@@ -20,13 +20,14 @@ export default function ProjectCard({
 }: Props) {
   return (
     <div className="flex w-full flex-col gap-4 overflow-hidden rounded-xl bg-dark/25 pb-5 backdrop-blur-xl">
-      <Image
-        src={`/projects/${image}`}
-        alt="Project 1"
-        width={1280}
-        height={720}
-        className="aspect-video w-full object-cover"
-      />
+      <div className="relative aspect-video w-full">
+        <Image
+          src={`/projects/${image}`}
+          alt="Project 1"
+          fill={true}
+          className="object-cover"
+        />
+      </div>
       <div className="flex flex-col  gap-2 px-5 text-white">
         <h2 className="font-semibold">{title}</h2>
         <div className="flex flex-wrap gap-1">

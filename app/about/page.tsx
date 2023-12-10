@@ -50,13 +50,9 @@ export default function page({}: Props) {
               ))}
             </div>
           </div>
-          <Image
-            src="/aboutme.jpg"
-            alt="My Image"
-            width={800}
-            height={800}
-            className="h-[400px] w-[400px] rounded-3xl  border-[15px]"
-          />
+          <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-2xl object-contain">
+            <Image src="/aboutme.jpg" alt="My Image" fill />
+          </div>
         </div>
         <Blob className="fixed -left-20 -top-10 h-64 w-64 bg-secondary blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
         <Blob className="fixed -right-20 bottom-0 h-64 w-64 bg-accent_1 blur-[90px] delay-1000 lg:-right-60 lg:h-96 lg:w-96 lg:blur-[120px]" />
