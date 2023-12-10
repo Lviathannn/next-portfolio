@@ -2,14 +2,8 @@ import Image from "next/image";
 import { Badge } from "../ui/badge";
 import { Github, Link2 } from "lucide-react";
 import Link from "next/link";
-
-type Props = {
-  title: string;
-  image: string;
-  tags: string[];
-  github: string;
-  demo: string;
-};
+import { projectCardProps } from "@/types/type";
+import { Card, CardContent, CardHeader } from "../ui/card";
 
 export default function ProjectCard({
   title,
@@ -17,40 +11,38 @@ export default function ProjectCard({
   tags,
   github,
   demo,
-}: Props) {
+}: projectCardProps) {
   return (
-    <div className="flex w-full flex-col gap-4 overflow-hidden rounded-xl bg-dark/25 pb-5 backdrop-blur-xl">
-      <div className="relative aspect-video w-full">
+    <Card className="flex w-full flex-col gap-4 overflow-hidden rounded-xl border-none !bg-dark/25 !pb-0 backdrop-blur-xl">
+      <CardHeader className="relative aspect-video w-full">
         <Image
           src={`/projects/${image}`}
           alt="Project 1"
           fill={true}
           className="object-cover"
         />
-      </div>
-      <div className="flex flex-col  gap-2 px-5 text-white">
+      </CardHeader>
+      <CardContent className="flex flex-col  gap-2 px-5 text-white">
         <h2 className="font-semibold">{title}</h2>
         <div className="flex flex-wrap gap-1">
           {tags.map((tag, index) => {
             if (index <= 2) {
               return (
-                <Badge
-                  variant="outline"
-                  className="bg-secondary/50 font-normal backdrop-blur-sm"
+                <div
+                  className="rounded-xl bg-secondary/50 px-2 py-1 text-xs font-normal backdrop-blur-sm"
                   key={tag}
                 >
                   {tag}
-                </Badge>
+                </div>
               );
             } else if (index == 3 && tags.length > 3) {
               return (
-                <Badge
-                  variant="outline"
-                  className="bg-secondary/50 font-normal backdrop-blur-sm"
+                <div
+                  className="rounded-xl bg-secondary/50 px-2 py-1 text-xs font-normal backdrop-blur-sm"
                   key={tag}
                 >
                   {tags.length - 3} + more
-                </Badge>
+                </div>
               );
             }
           })}
@@ -73,7 +65,7 @@ export default function ProjectCard({
             Demo
           </Link>
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 }

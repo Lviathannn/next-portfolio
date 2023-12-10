@@ -20,7 +20,7 @@ export default function page({}: Props) {
         />
         <div className="flex w-full flex-col-reverse items-center justify-evenly gap-14 lg:flex-row">
           <div className="max-w-xl">
-            <h1 className="max-w-lg text-[48px] font-semibold leading-none text-white">
+            <h1 className="max-w-lg text-[40px] font-bold leading-none text-white lg:text-[48px]">
               Muhammad Asrul Rifa Anwar
             </h1>
             <p className="mt-5 text-slate-300">
@@ -42,15 +42,20 @@ export default function page({}: Props) {
                   variant="outline"
                   size="icon"
                   className="border-none !bg-transparent text-white hover:!text-secondary"
+                  aria-label={`Link to ${social.name}`}
                 >
-                  <Link href={social.href} target="_blank">
+                  <Link
+                    href={social.href}
+                    target="_blank"
+                    aria-label={`Link to ${social.name}`}
+                  >
                     <social.Icon size={18} />
                   </Link>
                 </Button>
               ))}
             </div>
           </div>
-          <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-2xl object-contain">
+          <div className="relative aspect-square w-full max-w-xs overflow-hidden rounded-2xl object-contain lg:max-w-sm">
             <Image src="/aboutme.jpg" alt="My Image" fill />
           </div>
         </div>

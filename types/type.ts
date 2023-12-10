@@ -18,3 +18,10 @@ export type SkillType = {
   title: string;
   logo: string;
 }[];
+export type projectCardProps = {
+  title: string;
+  image: string;
+  tags: string[];
+  github: string;
+  demo: string;
+};

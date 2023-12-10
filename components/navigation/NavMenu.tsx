@@ -28,7 +28,7 @@ export function NavMenu() {
           <NavigationMenuContent className="max-w-xs dark:bg-primary">
             <ul className="flex max-w-xs flex-col gap-5 p-2">
               {aboutLinks.map((link) => (
-                <Link href={link.href} key={link.title}>
+                <Link href={link.href} key={link.title} legacyBehavior passHref>
                   <li className="flex w-[200px] items-center gap-3 rounded-md bg-transparent p-2 hover:bg-dark">
                     <link.Icon size={25} />
                     <div className="">
