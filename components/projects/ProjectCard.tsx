@@ -2,14 +2,7 @@ import Image from "next/image";
 import { Badge } from "../ui/badge";
 import { Github, Link2 } from "lucide-react";
 import Link from "next/link";
-
-type Props = {
-  title: string;
-  image: string;
-  tags: string[];
-  github: string;
-  demo: string;
-};
+import { projectCardProps } from "@/types/type";
 
 export default function ProjectCard({
   title,
@@ -17,7 +10,7 @@ export default function ProjectCard({
   tags,
   github,
   demo,
-}: Props) {
+}: projectCardProps) {
   return (
     <div className="flex w-full flex-col gap-4 overflow-hidden rounded-xl bg-dark/25 pb-5 backdrop-blur-xl">
       <div className="relative aspect-video w-full">
