@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { menuItems } from "@/lib/dummy";
 import { NavMenu } from "./NavMenu";
 import { usePathname } from "next/navigation";
+import { Button } from "../ui/button";
 
 type Props = {};
 
@@ -49,6 +50,8 @@ export default function Navbar({}: Props) {
             onClick={() => {
               setOpen(true);
             }}
+            aria-label="Open Menu"
+            className={`${open ? "hidden" : "block"} text-white`}
           >
             <AlignLeft />
           </SheetTrigger>

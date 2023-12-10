@@ -112,6 +112,7 @@ const Terminal: React.FC = () => {
             value={input}
             onChange={handleInputChange}
             onKeyDown={handleEnter}
+            aria-label="terminal-input"
             className="w-full border-none bg-transparent text-white outline-none"
           />
         </div>
