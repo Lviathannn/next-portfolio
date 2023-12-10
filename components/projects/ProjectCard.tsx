@@ -19,13 +19,13 @@ export default function ProjectCard({
   demo,
 }: Props) {
   return (
-    <div className="flex w-full flex-col gap-4 overflow-hidden rounded-2xl bg-dark/20 pb-5 backdrop-blur-xl">
+    <div className="flex w-full flex-col gap-4 overflow-hidden rounded-xl bg-dark/25 pb-5 backdrop-blur-xl">
       <Image
-        src={`/${image}`}
+        src={`/projects/${image}`}
         alt="Project 1"
         width={1280}
         height={720}
-        className="aspect-video w-full object-contain"
+        className="aspect-video w-full object-cover"
       />
       <div className="flex flex-col  gap-2 px-5 text-white">
         <h2 className="font-semibold">{title}</h2>
@@ -57,6 +57,7 @@ export default function ProjectCard({
         <div className="flex gap-5">
           <Link
             href={github}
+            target="_blank"
             className="mt-2 flex items-center gap-1 text-sm text-white hover:text-secondary"
           >
             <Github size={18} />
@@ -64,6 +65,7 @@ export default function ProjectCard({
           </Link>
           <Link
             href={demo}
+            target="_blank"
             className="mt-2 flex items-center gap-1 text-sm text-white hover:text-secondary"
           >
             <Link2 size={18} />

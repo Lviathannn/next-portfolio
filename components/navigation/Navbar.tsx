@@ -6,27 +6,22 @@ import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { menuItems } from "@/lib/dummy";
 import { NavMenu } from "./NavMenu";
-import { usePathname } from "next/navigation";
 
 type Props = {};
 
 export default function Navbar({}: Props) {
   const [isAtTop, setIsAtTop] = useState<boolean>(true);
-  const [isOpen, setIsOpen] = useState<boolean>(true);
-
-  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsAtTop(window.scrollY === 0);
     };
     document.addEventListener("scroll", handleScroll);
-    setIsOpen(false);
 
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
-  }, [pathname]);
+  }, []);
 
   return (
     <nav
@@ -45,14 +40,10 @@ export default function Navbar({}: Props) {
       {/* Mobile */}
       <div className="lg:hidden">
         <Sheet>
-          <SheetTrigger
-            onClick={() => {
-              setIsOpen(true);
-            }}
-          >
+          <SheetTrigger>
             <AlignLeft />
           </SheetTrigger>
-          <SheetContent isOpen={isOpen}>
+          <SheetContent className="lg:hidden">
             <ul className="flex flex-col gap-7">
               {menuItems.map((link) => (
                 <li key={link.name}>

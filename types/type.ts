@@ -5,3 +5,16 @@ export type LinksType = {
   href: string;
   Icon: LucideIcon;
 }[];
+
+export type ProjectType = {
+  title: string;
+  image: string;
+  tags: string[];
+  gitHub: string;
+  demo: string;
+}[];
+
+export type SkillType = {
+  title: string;
+  logo: string;
+}[];

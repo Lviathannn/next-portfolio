@@ -29,7 +29,7 @@ export function NavMenu() {
             <ul className="flex max-w-xs flex-col gap-5 p-2">
               {aboutLinks.map((link) => (
                 <Link href={link.href} key={link.title}>
-                  <li className="hover:bg-dark flex w-[200px] items-center gap-3 rounded-md bg-transparent p-2">
+                  <li className="flex w-[200px] items-center gap-3 rounded-md bg-transparent p-2 hover:bg-dark">
                     <link.Icon size={25} />
                     <div className="">
                       <h3 className="text-sm font-semibold">{link.title}</h3>
@@ -42,13 +42,6 @@ export function NavMenu() {
               ))}
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Contact
-            </NavigationMenuLink>
-          </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
