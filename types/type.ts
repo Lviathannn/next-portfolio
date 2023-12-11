@@ -9,9 +9,9 @@ export type LinksType = {
 export type ProjectType = {
   title: string;
   image: string;
-  tags: string[];
   gitHub: string;
   demo: string;
+  tags: string[];
 }[];
 
 export type SkillType = {
@@ -21,7 +21,8 @@ export type SkillType = {
 export type projectCardProps = {
   title: string;
   image: string;
-  tags: string[];
   github: string;
-  demo: string;
+  visit: string;
+  tags?: string[];
+  children?: React.ReactNode;
 };
