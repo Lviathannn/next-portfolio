@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import { menuItems } from "@/lib/dummy";
 import { NavMenu } from "./NavMenu";
 import { usePathname } from "next/navigation";
-import { Button } from "../ui/button";
 
 type Props = {};
 
