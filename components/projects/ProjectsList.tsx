@@ -1,21 +1,17 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import ProjectSkeleton from "./ProjectSkeleton";
+import { projects } from "@/lib/dummy";
 const DynamicProjectCard = dynamic(() => import("./ProjectCard"), {
   loading: () => <ProjectSkeleton />,
 });
 
 type Props = {};
 
-export default async function ProjectsList({}: Props) {
-  const res = await fetch("https://asrul.tech/api/projects", {
-    cache: "force-cache",
-  });
-
-  const data = await res.json();
+export default function ProjectsList({}: Props) {
   return (
     <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
-      {data?.data?.map((project: any) => (
+      {projects?.map((project: any) => (
         <DynamicProjectCard
           title={project.title}
           image={project.image}
