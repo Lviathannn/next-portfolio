@@ -4,7 +4,6 @@ import {
   LinkedinIcon,
   PhoneIcon,
 } from "lucide-react";
-import Link from "next/link";
 import React from "react";
 
 type Props = {};
@@ -15,44 +14,44 @@ export default function TerminalContact({}: Props) {
       <h6 className="mb-2 text-secondary">Contact :</h6>
       <ul>
         <li>
-          <Link
+          <a
             href="https://wa.me/6281952801343"
             target="_blank"
             className="flex items-center gap-2 hover:text-secondary"
           >
             <PhoneIcon size={15} />
             <p>Whatsapp</p>
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
+          <a
             href="https://www.instagram.com/lviathann/"
             target="_blank"
             className="flex items-center gap-2 hover:text-secondary"
           >
             <InstagramIcon size={15} />
             <p>Instagram</p>
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
+          <a
             href="https://www.linkedin.com/in/muhammadasrulrifaanwar/"
             target="_blank"
             className="flex items-center gap-2 hover:text-secondary"
           >
             <LinkedinIcon size={15} />
             <p>LinkedIn</p>
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
+          <a
             href="https://github.com/Lviathannn"
             target="_blank"
             className="flex items-center gap-2 hover:text-secondary"
           >
             <GithubIcon size={15} />
             <p>Github</p>
-          </Link>
+          </a>
         </li>
       </ul>
     </div>

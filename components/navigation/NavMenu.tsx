@@ -25,7 +25,7 @@ export function NavMenu() {
         </NavigationMenuItem>
         <NavigationMenuItem className="">
           <NavigationMenuTrigger>About Me</NavigationMenuTrigger>
-          <NavigationMenuContent className="max-w-xs dark:bg-primary">
+          <NavigationMenuContent className="max-w-xs hover:cursor-pointer dark:bg-primary">
             <ul className="flex max-w-xs flex-col gap-5 p-2">
               {aboutLinks.map((link) => (
                 <Link href={link.href} key={link.title} legacyBehavior passHref>

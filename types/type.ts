@@ -26,3 +26,8 @@ export type projectCardProps = {
   tags?: string[];
   children?: React.ReactNode;
 };
+
+export type SkillCardProps = {
+  title: string;
+  logo: string;
+};

@@ -1,11 +1,9 @@
-import ProjectCard from "@/components/projects/ProjectCard";
 import Blob from "@/components/ui/Blob";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { Button } from "@/components/ui/button";
-import { projects, socials } from "@/lib/dummy";
+import { socials } from "@/lib/dummy";
 import { Download } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 type Props = {};
 
@@ -14,7 +12,7 @@ export default function page({}: Props) {
     <main className="px-container py-container min-h-screen">
       <section className="flex flex-col items-center gap-16">
         <SectionTitle
-          className="text-[40px] font-semibold text-white"
+          className="text-[35px] font-semibold text-white md:text-[45px] md:font-bold"
           title="About Me"
           tagStyle="text-secondary font-bold"
         />
@@ -44,13 +42,13 @@ export default function page({}: Props) {
                   className="border-none !bg-transparent text-white hover:!text-secondary"
                   aria-label={`Link to ${social.name}`}
                 >
-                  <Link
+                  <a
                     href={social.href}
                     target="_blank"
                     aria-label={`Link to ${social.name}`}
                   >
                     <social.Icon size={18} />
-                  </Link>
+                  </a>
                 </Button>
               ))}
             </div>

@@ -20,7 +20,7 @@ export default function TerminalHeader({ customStyles = "" }: Props) {
         <span className="flex h-4 w-4 items-center justify-center rounded-full border border-secondary text-xs">
           N
         </span>{" "}
-        V.14.0.3
+        {process.env.NEXT_PUBLIC_NEXT_VERSION}
       </p>
     </div>
   );

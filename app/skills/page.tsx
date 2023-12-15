@@ -1,5 +1,5 @@
-import Blob from "@/components/ui/Blob";
 import SkillsTabs from "@/components/skills/SkillsTabs";
+import Blob from "@/components/ui/Blob";
 import SectionTitle from "@/components/ui/SectionTitle";
 
 type Props = {};
@@ -9,7 +9,7 @@ export default function page({}: Props) {
     <main className="px-container py-container min-h-screen">
       <section className="flex flex-col items-center gap-16">
         <SectionTitle
-          className="text-[40px] font-semibold text-white"
+          className="text-[35px] font-semibold text-white md:text-[45px] md:font-bold"
           title="My Skills"
           tagStyle="text-secondary font-bold"
         />
