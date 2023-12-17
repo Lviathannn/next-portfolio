@@ -12,7 +12,7 @@ export default function MainSection({}: Props) {
       <div className="relative z-10 flex w-full flex-col items-center justify-between gap-20 lg:flex-row">
         {/* Hero Title */}
         <div className="w-full ">
-          <h1 className="text-[55px] font-extrabold leading-none text-white sm:text-[60px] md:text-[64px] lg:text-[80px]">
+          <h1 className="text-[45px] font-extrabold leading-none text-white sm:text-[60px] md:text-[64px] lg:text-[80px]">
             Hello,
             <br />
             I’m Asrul{" "}

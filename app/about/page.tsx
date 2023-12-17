@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { socials } from "@/lib/dummy";
 import { Download } from "lucide-react";
 import Image from "next/image";
-
+import AboutImage from "@/public/aboutme.jpg";
 type Props = {};
 
 export default function page({}: Props) {
@@ -17,7 +17,7 @@ export default function page({}: Props) {
           tagStyle="text-secondary font-bold"
         />
         <div className="flex w-full flex-col-reverse items-center justify-evenly gap-14 lg:flex-row">
-          <div className="max-w-xl">
+          <div className="w-full max-w-xl">
             <h1 className="max-w-lg text-[40px] font-bold leading-none text-white lg:text-[48px]">
               Muhammad Asrul Rifa Anwar
             </h1>
@@ -54,7 +54,13 @@ export default function page({}: Props) {
             </div>
           </div>
           <div className="relative aspect-square w-full max-w-xs overflow-hidden rounded-2xl object-contain lg:max-w-sm">
-            <Image src="/aboutme.jpg" alt="My Image" fill />
+            <Image
+              src={AboutImage}
+              alt="My Image"
+              fill
+              placeholder="blur"
+              priority
+            />
           </div>
         </div>
         <Blob className="fixed -left-20 -top-10 h-64 w-64 bg-secondary blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />

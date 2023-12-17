@@ -1,6 +1,6 @@
 import { projectCardProps } from "@/types/type";
 import { GithubIcon, Link2 } from "lucide-react";
-import Image from "next/image";
+import ServeImage from "../ui/ServeImage";
 
 export default function ProjectCard({
   title,
@@ -12,7 +12,7 @@ export default function ProjectCard({
   return (
     <div className="flex w-full flex-col overflow-hidden rounded-xl bg-dark/30 pb-3">
       <div className="relative aspect-video w-full">
-        <Image src={`/projects/${image}`} fill alt={`${title}`} />
+        <ServeImage src={`${image}`} alt={title} />
       </div>
       <div className="px-4 py-2 text-white">
         <p className="text-lg font-semibold">{title}</p>
