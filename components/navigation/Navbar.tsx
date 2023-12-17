@@ -33,7 +33,7 @@ export default function Navbar({}: Props) {
       className={cn(
         `px-container fixed top-0 z-40 flex w-full  justify-between py-3 text-white transition-colors duration-700 ${
           isAtTop ? "bg-transparent" : "bg-primary/80 backdrop-blur-xl "
-        }}`,
+        }`,
       )}
     >
       <Link href={"/"} className="relative flex items-center justify-center">

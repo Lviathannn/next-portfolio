@@ -57,30 +57,27 @@ export const socials: LinksType = [
 ];
 
 export const skillsTools: SkillType = [
-  { title: "VS Code", logo: "vscode.webp" },
-  { title: "Figma", logo: "figma.webp" },
-  { title: "Vite JS", logo: "vite.svg" },
-  { title: "Git", logo: "git.webp" },
-  { title: "GitHub", logo: "github.webp" },
-  { title: "Netlify", logo: "netlify-icon.svg" },
-  { title: "NPM", logo: "npm.webp" },
+  { title: "VS Code", logo: "skills/vscode.png" },
+  { title: "Figma", logo: "skills/figma.png" },
+  { title: "Git", logo: "skills/git.png" },
+  { title: "GitHub", logo: "skills/github.png" },
+  { title: "NPM", logo: "skills/npm.png" },
 ];
 
 export const skillsLanguage: SkillType = [
-  { title: "HTML 5", logo: "html.webp" },
-  { title: "CSS 3", logo: "css-3.webp" },
-  { title: "SASS", logo: "sass.webp" },
-  { title: "JavaScript", logo: "js.webp" },
-  { title: "TypeScript", logo: "typescript.webp" },
+  { title: "HTML 5", logo: "skills/html.png" },
+  { title: "CSS 3", logo: "skills/css.png" },
+  { title: "SASS", logo: "skills/sass.png" },
+  { title: "JavaScript", logo: "skills/javascript.png" },
+  { title: "TypeScript", logo: "skills/typescript.png" },
 ];
 
 export const skillsLibrary: SkillType = [
-  { title: "Tailwind CSS", logo: "tailwindcss.webp" },
-  { title: "FlowBite", logo: "flowbite.svg" },
-  { title: "Framer Motion", logo: "framermotion.svg" },
-  { title: "React JS", logo: "react.svg" },
-  { title: "Redux Toolkit", logo: "redux.svg" },
-  { title: "Next JS", logo: "next.svg" },
+  { title: "Tailwind CSS", logo: "skills/tailwindcss.png" },
+  { title: "Framer Motion", logo: "skills/framer.png" },
+  { title: "React JS", logo: "skills/react.png" },
+  { title: "Redux Toolkit", logo: "skills/redux.png" },
+  { title: "Next JS", logo: "skills/nextjs.png" },
 ];
 
 export const aboutLinks: {
@@ -112,7 +109,7 @@ export const aboutLinks: {
 export const projects: ProjectType = [
   {
     title: "My Portfolio",
-    image: "portfolio.png",
+    image: "projects/portfolio.png",
     tags: [
       "Next JS",
       "TypeScript",
@@ -125,35 +122,35 @@ export const projects: ProjectType = [
   },
   {
     title: "Old Portfolio",
-    image: "old-portfolio.png",
+    image: "projects/old-portfolio.png",
     tags: ["React JS", "Tailwind CSS", "Framer Motion", "Vite"],
     gitHub: "https://github.com/Lviathannn/my-portfolio",
     demo: "https://muhammadasrul-v1.vercel.app",
   },
   {
     title: "My Qur'an",
-    image: "my-quran.png",
+    image: "projects/my-quran.png",
     tags: ["React JS", "Tailwind CSS", "Flowbite", "Vite"],
     gitHub: "https://github.com/Lviathannn/my-quran",
     demo: "https://my-alquran-id.vercel.app/",
   },
   {
     title: "PMII Website",
-    image: "pmii.png",
+    image: "projects/pmii.png",
     tags: ["React JS", "Tailwind CSS", "Flowbite", "Vite"],
     gitHub: "https://github.com/Lviathannn/pmii-website",
     demo: "https://www.mediapergerakandarussalamciamis.or.id/",
   },
   {
     title: "Azizah Mukarromah Website",
-    image: "web-caleg.png",
+    image: "projects/web-caleg.png",
     tags: ["Next JS", "Tailwind CSS", "Next UI", "Framer Motion"],
     gitHub: "https://github.com/Lviathannn/pmii-website",
     demo: "https://www.mediapergerakandarussalamciamis.or.id/",
   },
   {
     title: "Sabreena Contruction",
-    image: "sabreena-construction.png",
+    image: "projects/sabreena-construction.png",
     tags: [
       "Next JS",
       "Tailwind CSS",
@@ -167,7 +164,7 @@ export const projects: ProjectType = [
   },
   {
     title: "Pokedex",
-    image: "pokedex.png",
+    image: "projects/pokedex.png",
     tags: ["HTML", "Tailwind CSS", "Javascript", "Pokemon API"],
     gitHub: "https://github.com/Lviathannn/pokedex",
     demo: "https://lviathannn.github.io/pokedex/",
