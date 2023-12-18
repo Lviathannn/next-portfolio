@@ -20,10 +20,10 @@ export default function MainSection({}: Props) {
               👋
             </span>
           </h1>
-          <h2 className="my-2 text-xl font-semibold text-slate-200 lg:text-2xl">
+          <h2 className="my-2 text-2xl font-semibold text-slate-300 lg:text-3xl">
             Junior FrontEnd Developer
           </h2>
-          <p className="mt-2 text-slate-300 lg:text-xl">
+          <p className="mt-2 max-w-lg text-slate-400 lg:text-xl">
             Transforming Pixels into Poetry, Conjuring Captivating Web Journeys
             as a Front-End Wizard
           </p>

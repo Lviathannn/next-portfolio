@@ -4,8 +4,8 @@ type Props = {};
 
 export default function SkillSkeleton({}: Props) {
   return (
-    <div className="z-10 flex flex-col items-center justify-center rounded-md p-5 backdrop-blur-sm dark:bg-dark/20 md:py-10">
-      <Skeleton className="aspect-square w-full max-w-[100px] !bg-dark md:max-w-[120px]"></Skeleton>
+    <div className="flex flex-col items-center justify-center overflow-hidden rounded-xl bg-dark/40 p-5 md:py-10">
+      <Skeleton className="aspect-square w-full max-w-[100px] !bg-dark"></Skeleton>
       <Skeleton className="mt-5 h-5 w-[70%] !bg-dark"></Skeleton>
     </div>
   );

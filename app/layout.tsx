@@ -18,7 +18,19 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   title: "Muhammad Asrul Rifa Anwar",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL || "",
+    "https://asrul.tech/",
+  ),
   description: "Junior Frontend Developer",
+  openGraph: {
+    url: process.env.NEXT_PUBLIC_BASE_URL || "https://asrul.tech/",
+    title: "Muhammad Asrul Rifa Anwar",
+    siteName: "Muhammad Asrul Rifa Anwar",
+    description:
+      "I am a junior frontend developer with a primary focus on React.js, Next.js, Tailwind CSS, and Framer Motion technologies. I am an individual who is diligent and passionate about the learning process, with the ultimate goal of realizing my aspirations as a professional frontend developer.",
+    images: "/opengraph.png",
+  },
 };
 
 export default function RootLayout({
