@@ -145,8 +145,8 @@ export const projects: ProjectType = [
     title: "Azizah Mukarromah Website",
     image: "projects/web-caleg.png",
     tags: ["Next JS", "Tailwind CSS", "Next UI", "Framer Motion"],
-    gitHub: "https://github.com/Lviathannn/pmii-website",
-    demo: "https://www.mediapergerakandarussalamciamis.or.id/",
+    gitHub: "https://github.com/Lviathannn/web-caleg",
+    demo: "https://www.azizahmukarromah.online/",
   },
   {
     title: "Sabreena Contruction",
@@ -161,6 +161,13 @@ export const projects: ProjectType = [
     ],
     gitHub: "https://github.com/Lviathannn/sabreena-landingpages",
     demo: "https://sabreena-landingpages.vercel.app/",
+  },
+  {
+    title: "Hash Table Implementation",
+    image: "projects/hashtable.png",
+    tags: ["Next JS", "Tailwind CSS", "Typescript", "Shader UI"],
+    gitHub: "https://github.com/Lviathannn/hashtable-implementation",
+    demo: "https://hashtable-implementation.vercel.app/",
   },
   {
     title: "Pokedex",
