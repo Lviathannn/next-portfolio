@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Blob from "../ui/Blob";
 import { Download } from "lucide-react";
+import Link from "next/link";
 
 type Props = {};
 
@@ -28,8 +29,10 @@ export default function MainSection({}: Props) {
             as a Front-End Wizard
           </p>
           <Button className="mt-5 flex items-center gap-2 bg-secondary !text-dark shadow-2xl hover:bg-accent_1 dark:bg-secondary dark:hover:bg-accent_1">
-            Download CV
-            <Download size={18} />
+            <a href="/myCV.pdf" download="myCV.pdf" className="flex gap-3">
+              Download CV
+              <Download size={18} />
+            </a>
           </Button>
         </div>
         {/* Terminal */}

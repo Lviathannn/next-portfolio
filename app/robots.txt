@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+
+Disallow: /private/
+
+Sitemap: https://asrul.tech/sitemap.xml

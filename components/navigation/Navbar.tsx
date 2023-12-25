@@ -17,6 +17,7 @@ export default function Navbar({}: Props) {
   const pathname = usePathname();
 
   useEffect(() => {
+    setIsAtTop(window.scrollY === 0);
     const handleScroll = () => {
       setIsAtTop(window.scrollY === 0);
     };

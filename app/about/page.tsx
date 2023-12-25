@@ -30,9 +30,11 @@ export default function page({}: Props) {
             </p>
 
             <div className="mt-5 flex items-center gap-3">
-              <Button className="flex items-center gap-2 bg-secondary !text-dark shadow-2xl hover:bg-accent_1 dark:bg-secondary dark:hover:bg-accent_1">
-                Download CV
-                <Download size={18} />
+              <Button className="mt-5 flex items-center gap-2 bg-secondary !text-dark shadow-2xl hover:bg-accent_1 dark:bg-secondary dark:hover:bg-accent_1">
+                <a href="/myCV.pdf" download="myCV.pdf" className="flex gap-3">
+                  Download CV
+                  <Download size={18} />
+                </a>
               </Button>
               {socials.map((social) => (
                 <Button

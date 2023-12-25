@@ -4,7 +4,7 @@ import TerminalAbout from "./TerminalAbout";
 import TerminalHelp from "./TerminalHelp";
 import TerminalSkills from "./TerminalSkills";
 import TerminalHeader from "./TerminalHeader";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import TerminalProjects from "./TerminalProjects";
 import TerminalContact from "./TerminalContact";
 
@@ -18,6 +18,11 @@ const defaultValue = { content: <TerminalHelp />, id: Date.now() };
 const Terminal: React.FC = () => {
   const [input, setInput] = useState<string>("");
   const [output, setOutput] = useState<OutputItem[]>([defaultValue]);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInput(event.target.value);
@@ -108,6 +113,7 @@ const Terminal: React.FC = () => {
         <div className="input flex gap-2 px-4 text-sm text-white">
           <span className="text-accent_3">$</span>
           <input
+            ref={inputRef}
             type="text"
             value={input}
             onChange={handleInputChange}
