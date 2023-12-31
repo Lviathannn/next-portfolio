@@ -21,7 +21,9 @@ const Terminal: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    inputRef.current?.focus();
+    if (window.innerWidth > 1024) {
+      inputRef.current?.focus();
+    }
   }, []);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
