@@ -90,7 +90,7 @@ const Terminal: React.FC = () => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden rounded-xl border-2 bg-primary/50 font-firacode backdrop-blur-lg">
+    <div className="relative w-full overflow-hidden rounded-xl border-2 bg-primary/60 font-firacode backdrop-blur-lg dark:bg-primary/50">
       <div className="flex w-full gap-1 px-3 py-2">
         <div className="h-3 w-3 rounded-full bg-red-500"></div>
         <div className="h-3 w-3 rounded-full bg-yellow-500"></div>

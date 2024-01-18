@@ -42,14 +42,14 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "dark overflow-x-hidden bg-primary",
+          "overflow-x-hidden bg-slate-100 dark:bg-primary ",
           poppins.className,
           firaCode.variable,
         )}
       >
         <Navbar />
         {children}
-        <div className="fixed bottom-0 left-0 right-0 top-0 -z-10 bg-[url('/grid.svg')] opacity-[15%]" />
+        <div className="fixed bottom-0 left-0 right-0 top-0 -z-10 bg-[url('/grid.svg')]  opacity-[15%] invert dark:invert-0" />
         <Footer />
       </body>
     </html>

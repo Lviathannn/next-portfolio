@@ -5,19 +5,21 @@ type Props = {};
 
 export default function Footer({}: Props) {
   return (
-    <footer className="px-container relative z-20 flex flex-col gap-10 bg-primary/70 py-10 text-white lg:py-14">
+    <footer className="px-container relative z-20 flex flex-col gap-10 bg-slate-100 py-10 text-white dark:bg-primary/70 lg:py-14">
       <div className=" flex flex-col justify-between gap-10 lg:flex-row">
         <div className="flex flex-col">
           <h2 className="text-primary-text text-xl font-semibold text-secondary">
             Muhammad Asrul Rifa Anwar
           </h2>
-          <h3 className="text-primary-text text-medium font-light">
+          <h3 className="text-primary-text text-medium text-slate-500 dark:text-white">
             Junior FrontEnd Developer
           </h3>
         </div>
         <div className="flex flex-col gap-3">
-          <h2 className="text-primary-text text-xl">Navigations</h2>
-          <div className="text-primary-text flex flex-col gap-3 font-light">
+          <h2 className="text-primary-text text-xl text-slate-500 dark:text-white">
+            Navigations
+          </h2>
+          <div className="text-primary-text flex flex-col gap-3 text-slate-500 dark:text-white">
             {menuItems.map((item, index) => (
               <Link
                 className="flex cursor-pointer items-center gap-2 font-normal hover:text-secondary"
@@ -31,8 +33,10 @@ export default function Footer({}: Props) {
           </div>
         </div>
         <div className="flex flex-col gap-3">
-          <h2 className="text-primary-text text-xl">Social Media</h2>
-          <div className="text-primary-text flex flex-col gap-3 font-light">
+          <h2 className="text-primary-text text-xl text-slate-500 dark:text-white">
+            Social Media
+          </h2>
+          <div className="text-primary-text flex flex-col gap-3 text-slate-500 dark:text-white">
             {socials.map((item, index) => (
               <Link
                 className="flex cursor-pointer items-center gap-2 font-normal hover:text-secondary"
@@ -46,7 +50,7 @@ export default function Footer({}: Props) {
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 text-slate-500 dark:text-white">
           <h2 className="text-primary-text text-xl">Information</h2>
           <div className="text-primary-text flex flex-col gap-1 font-light">
             <span>Regol - Bandung</span>
@@ -56,7 +60,7 @@ export default function Footer({}: Props) {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="text-slate-500 dark:text-white">
         <p className="border-t-1 pt-10 text-center ">
           Built With ❤️ and 🧋 in 2023
         </p>

@@ -11,8 +11,12 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { aboutLinks } from "@/lib/dummy";
+import { Button } from "../ui/button";
+import { MoonIcon } from "lucide-react";
+import { useThemeStore } from "@/store/ThemeStore";
 
 export function NavMenu() {
+  const toogle = useThemeStore((state) => state.toogleDarkMode);
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -23,13 +27,13 @@ export function NavMenu() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem className="">
+        <NavigationMenuItem>
           <NavigationMenuTrigger>About Me</NavigationMenuTrigger>
-          <NavigationMenuContent className="max-w-xs hover:cursor-pointer dark:bg-primary">
+          <NavigationMenuContent className="max-w-xs text-slate-500 hover:cursor-pointer dark:bg-primary dark:text-white">
             <ul className="flex max-w-xs flex-col gap-5 p-2">
               {aboutLinks.map((link) => (
                 <Link href={link.href} key={link.title} legacyBehavior passHref>
-                  <li className="flex w-[200px] items-center gap-3 rounded-md bg-transparent p-2 hover:bg-dark">
+                  <li className="flex w-[200px] items-center gap-3 rounded-md bg-transparent p-2 hover:bg-slate-100 dark:hover:bg-dark">
                     <link.Icon size={25} />
                     <div className="">
                       <h3 className="text-sm font-semibold">{link.title}</h3>
@@ -44,6 +48,13 @@ export function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
+      <Button
+        size="icon"
+        className="ml-1 h-7 w-7 bg-slate-500 hover:bg-slate-500/70 dark:bg-secondary dark:text-white dark:hover:bg-secondary/70"
+        onClick={toogle}
+      >
+        <MoonIcon size={18} />
+      </Button>
     </NavigationMenu>
   );
 }
