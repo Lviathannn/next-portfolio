@@ -10,11 +10,11 @@ export default function ProjectCard({
   children,
 }: projectCardProps) {
   return (
-    <div className="flex w-full flex-col overflow-hidden rounded-xl bg-dark/30 pb-3">
+    <div className="flex w-full flex-col overflow-hidden rounded-xl bg-slate-200/50 pb-3 dark:bg-dark/40">
       <div className="relative aspect-video w-full">
         <ServeImage src={`${image}`} alt={title} />
       </div>
-      <div className="px-4 py-2 text-white">
+      <div className="px-4 py-2 text-slate-500 dark:text-white">
         <p className="text-lg font-semibold">{title}</p>
         <div className="my-2 flex flex-wrap gap-1">{children}</div>
         <div className="mt-3 flex gap-5">

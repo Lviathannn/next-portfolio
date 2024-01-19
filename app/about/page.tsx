@@ -12,16 +12,16 @@ export default function page({}: Props) {
     <main className="px-container py-container min-h-screen">
       <section className="flex flex-col items-center gap-16">
         <SectionTitle
-          className="text-[35px] font-semibold text-white md:text-[45px] md:font-bold"
+          className="text-[35px] font-semibold text-slate-600 dark:text-white md:text-[45px] md:font-bold"
           title="About Me"
           tagStyle="text-secondary font-bold"
         />
         <div className="flex w-full flex-col-reverse items-center justify-evenly gap-14 lg:flex-row">
           <div className="w-full max-w-xl">
-            <h1 className="max-w-lg text-[40px] font-bold leading-none text-white lg:text-[48px]">
+            <h1 className="max-w-lg text-[40px] font-bold leading-none text-slate-600 dark:text-white lg:text-[48px]">
               Muhammad Asrul Rifa Anwar
             </h1>
-            <p className="mt-5 text-slate-300">
+            <p className="mt-5 text-slate-500 dark:text-slate-300">
               I am a junior frontend developer with a primary focus on React.js,
               Next.js, Tailwind CSS, and Framer Motion technologies. I am an
               individual who is diligent and passionate about the learning
@@ -31,7 +31,11 @@ export default function page({}: Props) {
 
             <div className="mt-5 flex items-center gap-3">
               <Button className="mt-5 flex items-center gap-2 bg-secondary !text-dark shadow-2xl hover:bg-accent_1 dark:bg-secondary dark:hover:bg-accent_1">
-                <a href="/myCV.pdf" download="myCV.pdf" className="flex gap-3">
+                <a
+                  href="/myCV.pdf"
+                  download="myCV.pdf"
+                  className="flex gap-3 text-white dark:text-dark"
+                >
                   Download CV
                   <Download size={18} />
                 </a>
@@ -41,7 +45,7 @@ export default function page({}: Props) {
                   key={social.name}
                   variant="outline"
                   size="icon"
-                  className="border-none !bg-transparent text-white hover:!text-secondary"
+                  className="border-none !bg-transparent text-slate-500 hover:!text-secondary dark:text-white"
                   aria-label={`Link to ${social.name}`}
                 >
                   <a

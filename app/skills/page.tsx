@@ -9,7 +9,7 @@ export default function page({}: Props) {
     <main className="px-container py-container min-h-screen">
       <section className="flex flex-col items-center gap-16">
         <SectionTitle
-          className="text-[35px] font-semibold text-white md:text-[45px] md:font-bold"
+          className="text-[35px] font-semibold text-slate-600 dark:text-white md:text-[45px] md:font-bold"
           title="My Skills"
           tagStyle="text-secondary font-bold"
         />
