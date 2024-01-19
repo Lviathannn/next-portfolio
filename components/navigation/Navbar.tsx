@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 import useViewportWidth from "@/hooks/useViewportWidth";
 import ThemeButton from "./ThemeButton";
 import { useThemeStore } from "@/store/ThemeStore";
+import { useTheme } from "next-themes";
 
 type Props = {};
 
@@ -19,6 +20,7 @@ export default function Navbar({}: Props) {
   const screenWidth = useViewportWidth();
   const pathname = usePathname();
   const darkMode = useThemeStore((state) => state.darkMode);
+  const { setTheme } = useTheme();
 
   useEffect(() => {
     setIsAtTop(window.scrollY === 0);
@@ -36,10 +38,12 @@ export default function Navbar({}: Props) {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
+      setTheme("dark");
     } else {
       document.documentElement.classList.remove("dark");
+      setTheme("light");
     }
-  }, [darkMode]);
+  }, [darkMode, setTheme]);
 
   return (
     <nav

@@ -2,9 +2,13 @@
 import { useEffect, useState } from "react";
 
 function useViewportWidth(): number {
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportWidth, setViewportWidth] = useState<number>(0);
 
   useEffect(() => {
+    if (window.innerWidth) {
+      setViewportWidth(window.innerWidth);
+    }
+
     const handleResize = () => {
       setViewportWidth(window.innerWidth);
     };

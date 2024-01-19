@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/navigation/Footer";
+import Theme from "@/components/Theme";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -39,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           "overflow-x-hidden bg-slate-100 dark:bg-primary ",
@@ -47,10 +48,12 @@ export default function RootLayout({
           firaCode.variable,
         )}
       >
-        <Navbar />
-        {children}
-        <div className="fixed bottom-0 left-0 right-0 top-0 -z-10 bg-[url('/grid.svg')]  opacity-[15%] invert dark:invert-0" />
-        <Footer />
+        <Theme>
+          <Navbar />
+          {children}
+          <div className="fixed bottom-0 left-0 right-0 top-0 -z-10 bg-[url('/grid.svg')]  opacity-[15%] invert dark:invert-0" />
+          <Footer />
+        </Theme>
       </body>
     </html>
   );

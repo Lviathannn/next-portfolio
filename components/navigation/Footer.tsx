@@ -5,7 +5,7 @@ type Props = {};
 
 export default function Footer({}: Props) {
   return (
-    <footer className="px-container relative z-20 flex flex-col gap-10 bg-slate-100 py-10 text-white dark:bg-primary/70 lg:py-14">
+    <footer className="px-container relative z-20 flex flex-col gap-10 bg-slate-100/50 py-10 text-white dark:bg-primary/70 lg:py-14">
       <div className=" flex flex-col justify-between gap-10 lg:flex-row">
         <div className="flex flex-col">
           <h2 className="text-primary-text text-xl font-semibold text-secondary">

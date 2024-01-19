@@ -24,7 +24,7 @@ export default function ProjectsList({}: Props) {
               return (
                 <span
                   key={tag}
-                  className="rounded-lg bg-secondary/50 px-2 py-1 text-xs font-medium text-white"
+                  className="rounded-lg bg-secondary px-2 py-1 text-xs font-medium text-white"
                 >
                   {tag}
                 </span>
@@ -33,7 +33,7 @@ export default function ProjectsList({}: Props) {
               return (
                 <span
                   key={tag}
-                  className="rounded-lg bg-secondary/50 px-2 py-1 text-xs font-medium text-white"
+                  className="rounded-lg bg-secondary px-2 py-1 text-xs font-medium text-white"
                 >
                   {project.tags.length - 3} + more
                 </span>
