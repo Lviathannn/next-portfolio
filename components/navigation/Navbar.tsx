@@ -37,10 +37,8 @@ export default function Navbar({}: Props) {
   }, [pathname]);
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add("dark");
       setTheme("dark");
     } else {
-      document.documentElement.classList.remove("dark");
       setTheme("light");
     }
   }, [darkMode, setTheme]);
