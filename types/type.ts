@@ -12,7 +12,7 @@ export type ProjectType = {
   gitHub: string;
   demo: string;
   tags: string[];
-}[];
+};
 
 export type SkillType = {
   title: string;

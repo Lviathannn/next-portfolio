@@ -106,7 +106,7 @@ export const aboutLinks: {
   },
 ];
 
-export const projects: ProjectType = [
+export const projects: ProjectType[] = [
   {
     title: "My Portfolio",
     image: "projects/portfolio.png",

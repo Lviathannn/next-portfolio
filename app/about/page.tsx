@@ -29,7 +29,7 @@ export default function page({}: Props) {
               professional frontend developer.
             </p>
 
-            <div className="mt-5 flex items-center gap-3">
+            <div className="mt-5 flex items-end gap-3">
               <Button className="mt-5 flex items-center gap-2 bg-secondary !text-dark shadow-2xl hover:bg-accent_1 dark:bg-secondary dark:hover:bg-accent_1">
                 <a
                   href="/myCV.pdf"
@@ -70,7 +70,7 @@ export default function page({}: Props) {
           </div>
         </div>
         <Blob className="fixed -left-20 -top-10 h-64 w-64 bg-secondary blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
-        <Blob className="fixed -right-20 bottom-0 h-64 w-64 bg-accent_1 blur-[90px] delay-1000 lg:-right-60 lg:h-96 lg:w-96 lg:blur-[120px]" />
+        <Blob className="fixed -right-20 bottom-0 h-64 w-64 bg-accent_1 blur-[90px] lg:-right-60 lg:h-96 lg:w-96 lg:blur-[120px]" />
       </section>
     </main>
   );
