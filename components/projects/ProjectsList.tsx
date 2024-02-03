@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import ProjectSkeleton from "./ProjectSkeleton";
-import { projects } from "@/lib/dummy";
+import { projects } from "@/data/dummy";
 const DynamicProjectCard = dynamic(() => import("./ProjectCard"), {
   loading: () => <ProjectSkeleton />,
 });

@@ -2,15 +2,15 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Link from "next/link";
 import { AlignLeft } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
-import { menuItems } from "@/lib/dummy";
+import { menuItems } from "@/data/dummy";
 import { NavMenu } from "./NavMenu";
 import { usePathname } from "next/navigation";
 import useViewportWidth from "@/hooks/useViewportWidth";
 import ThemeButton from "./ThemeButton";
-import { useThemeStore } from "@/store/ThemeStore";
+import { useThemeStore } from "@/utils/store/ThemeStore";
 import { useTheme } from "next-themes";
+import { cn } from "@/utils/utils";
 
 type Props = {};
 

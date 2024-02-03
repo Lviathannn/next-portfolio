@@ -1,4 +1,4 @@
-import { useThemeStore } from "@/store/ThemeStore";
+import { useThemeStore } from "@/utils/store/ThemeStore";
 import { Moon } from "lucide-react";
 import { useShallow } from "zustand/react/shallow";
 import { Switch } from "../ui/switch";

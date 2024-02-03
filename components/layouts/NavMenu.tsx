@@ -10,10 +10,10 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { aboutLinks } from "@/lib/dummy";
+import { aboutLinks } from "@/data/dummy";
 import { Button } from "../ui/button";
 import { MoonIcon } from "lucide-react";
-import { useThemeStore } from "@/store/ThemeStore";
+import { useThemeStore } from "@/utils/store/ThemeStore";
 
 export function NavMenu() {
   const toogle = useThemeStore((state) => state.toogleDarkMode);

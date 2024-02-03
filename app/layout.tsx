@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins, Fira_Code } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import Navbar from "@/components/navigation/Navbar";
-import Footer from "@/components/navigation/Footer";
+import Navbar from "@/components/layouts/Navbar";
+import Footer from "@/components/layouts/Footer";
 import Theme from "@/components/Theme";
+import { cn } from "@/utils/utils";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800"],

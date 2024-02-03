@@ -1,4 +1,4 @@
-import { menuItems, socials } from "@/lib/dummy";
+import { menuItems, socials } from "@/data/dummy";
 import Link from "next/link";
 
 type Props = {};
