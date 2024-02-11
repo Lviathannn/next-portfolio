@@ -7,7 +7,7 @@ import { menuItems } from "@/data/dummy";
 import { NavMenu } from "./NavMenu";
 import { usePathname } from "next/navigation";
 import useViewportWidth from "@/hooks/useViewportWidth";
-import ThemeButton from "./ThemeButton";
+import ThemeButton from "../ui/ThemeButton";
 import { useThemeStore } from "@/utils/store/ThemeStore";
 import { useTheme } from "next-themes";
 import { cn } from "@/utils/utils";
@@ -54,10 +54,10 @@ export default function Navbar({}: Props) {
       )}
     >
       <Link href={"/"} className="relative flex items-center justify-center">
-        <h2 className="text-xl font-semibold text-slate-500 before:absolute before:-left-1 before:-z-30 before:h-3 before:w-3 before:rounded-full before:bg-secondary dark:text-white">
+        <h2 className="text-xl font-semibold text-slate-500 before:absolute before:-left-1 before:-z-30 before:h-3 before:w-3 before:rounded-full before:bg-teal-400 dark:text-white">
           Asrul
         </h2>
-        <span className="font-bold text-secondary">.()</span>
+        <span className="font-bold text-teal-400">.()</span>
       </Link>
       {/* Mobile */}
       {screenWidth < 1024 ? (

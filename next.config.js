@@ -8,6 +8,12 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "github-readme-stats.vercel.app",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };

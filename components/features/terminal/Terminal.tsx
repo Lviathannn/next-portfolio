@@ -1,5 +1,4 @@
 "use client";
-
 import TerminalAbout from "./TerminalAbout";
 import TerminalHelp from "./TerminalHelp";
 import TerminalSkills from "./TerminalSkills";
@@ -7,35 +6,28 @@ import TerminalHeader from "./TerminalHeader";
 import { useEffect, useRef, useState } from "react";
 import TerminalProjects from "./TerminalProjects";
 import TerminalContact from "./TerminalContact";
-
 interface OutputItem {
   content: string | React.ReactNode;
   id: number;
 }
-
 const defaultValue = { content: <TerminalHelp />, id: Date.now() };
-
 const Terminal: React.FC = () => {
   const [input, setInput] = useState<string>("");
   const [output, setOutput] = useState<OutputItem[]>([defaultValue]);
   const inputRef = useRef<HTMLInputElement>(null);
-
   useEffect(() => {
     if (window.innerWidth > 1024) {
       inputRef.current?.focus();
     }
   }, []);
-
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInput(event.target.value);
   };
-
   const handleEnter = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       processCommand();
     }
   };
-
   const processCommand = () => {
     let newOutput: OutputItem[] = [...output];
 
@@ -88,9 +80,8 @@ const Terminal: React.FC = () => {
     setOutput(newOutput);
     setInput("");
   };
-
   return (
-    <div className="relative w-full overflow-hidden rounded-xl border-2 bg-primary/60 font-firacode backdrop-blur-lg dark:bg-primary/50">
+    <div className="relative w-full overflow-hidden rounded-xl border-2 bg-primary/80 font-firacode backdrop-blur-lg dark:bg-primary/50">
       <div className="flex w-full gap-1 px-3 py-2">
         <div className="h-3 w-3 rounded-full bg-red-500"></div>
         <div className="h-3 w-3 rounded-full bg-yellow-500"></div>

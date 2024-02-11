@@ -1,10 +1,9 @@
-import Terminal from "@/components/home/terminal/Terminal";
+import Terminal from "@/components/features/terminal/Terminal";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Blob from "../ui/Blob";
+import Blob from "../../ui/Blob";
 import { Download } from "lucide-react";
 import Marquee from "react-fast-marquee";
-import { Paralax } from "./Paralax";
 type Props = {};
 
 export default function MainSection({}: Props) {
@@ -28,7 +27,7 @@ export default function MainSection({}: Props) {
             Transforming Pixels into Poetry, Conjuring Captivating Web Journeys
             as a Front-End Wizard
           </p>
-          <Button className="!dark:text-dark mt-5 flex items-center gap-2 bg-secondary shadow-2xl hover:bg-accent_1 dark:bg-secondary dark:hover:bg-accent_1">
+          <Button className="!dark:text-dark mt-5 flex items-center gap-2 bg-teal-400 shadow-2xl hover:bg-teal-400 dark:bg-teal-400 dark:hover:bg-teal-400">
             <a href="/myCV.pdf" download="myCV.pdf" className="flex gap-3">
               Download CV
               <Download size={18} />
@@ -39,40 +38,40 @@ export default function MainSection({}: Props) {
         <Terminal />
       </div>
       {/* Built With */}
-      <Marquee className="z-10 mt-28" autoFill>
-        <Image
-          src={"/nextjs.svg"}
-          alt="Next JS Logo"
-          width={180}
-          height={180}
-          className="mx-10 opacity-30 invert dark:invert-0"
-        />
-        <Image
-          src={"/tailwind.svg"}
-          alt="Tailwind CSS Logo"
-          width={250}
-          height={250}
-          className="mx-10 opacity-30 invert dark:invert-0"
-        />
-        <Image
-          src={"/shadcn.svg"}
-          alt="Shadcn UI Logo"
-          width={250}
-          height={250}
-          className="mx-10 opacity-30 invert dark:invert-0"
-        />
-        <Image
-          src={"/framer.svg"}
-          alt="Framer Motion Logo"
-          width={250}
-          height={250}
-          className="mx-10 opacity-30 invert dark:invert-0"
-        />
-      </Marquee>
-      {/* Blob */}
-      <Blob className="-left-20 -top-10 h-72 w-72 bg-secondary blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
-      <Blob className="-right-20 bottom-64 h-64 w-64 bg-accent_1 blur-[90px]   lg:-right-60 lg:bottom-40 lg:h-96 lg:w-96 lg:blur-[120px]" />
-      <Paralax />
+      <Blob className="-left-20 -top-10 h-72 w-72 bg-teal-400 blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
+      <Blob className="-right-20 top-44 h-64 w-64 bg-emerald-400 blur-[90px]   lg:-right-60 lg:bottom-40 lg:h-96 lg:w-96 lg:blur-[120px]" />
+      <div className="my-10 h-20 max-h-20 w-full">
+        <Marquee className="z-10 lg:mt-10" autoFill speed={50}>
+          <Image
+            src={"/nextjs.svg"}
+            alt="Next JS Logo"
+            width={150}
+            height={150}
+            className="mx-5 opacity-50 invert dark:invert-0 lg:mx-10"
+          />
+          <Image
+            src={"/tailwind.svg"}
+            alt="Tailwind CSS Logo"
+            width={200}
+            height={200}
+            className="mx-5 opacity-50 invert dark:invert-0 lg:mx-10"
+          />
+          <Image
+            src={"/shadcn.svg"}
+            alt="Shadcn UI Logo"
+            width={200}
+            height={200}
+            className="mx-5 opacity-50 invert dark:invert-0 lg:mx-10"
+          />
+          <Image
+            src={"/framer.svg"}
+            alt="Framer Motion Logo"
+            width={200}
+            height={200}
+            className="mx-5 opacity-50 invert dark:invert-0 lg:mx-10"
+          />
+        </Marquee>
+      </div>
     </section>
   );
 }

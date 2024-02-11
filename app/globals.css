@@ -15,7 +15,19 @@
 }
 
 #terminal::-webkit-scrollbar {
+  @apply w-[5px] bg-transparent;
+}
+
+#skill::-webkit-scrollbar {
   @apply w-[5px];
+}
+
+#skill::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+#skill::-webkit-scrollbar-thumb {
+  @apply bg-teal-400;
 }
 
 #terminal::-webkit-scrollbar-track {
@@ -23,7 +35,7 @@
 }
 
 #terminal::-webkit-scrollbar-thumb {
-  @apply bg-secondary;
+  @apply bg-teal-400;
 }
 
 .wave {

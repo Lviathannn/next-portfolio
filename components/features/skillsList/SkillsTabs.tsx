@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import dynamic from "next/dynamic";
 import { skillsLanguage, skillsLibrary, skillsTools } from "@/data/dummy";
 import SkillSkeleton from "./SkillSkeleton";
@@ -18,24 +18,24 @@ export default function SkillsTabs({}: Props) {
     <div className="flex w-full flex-col items-center gap-10">
       <div className="flex w-full max-w-full items-center space-x-1 rounded-xl p-1 backdrop-blur-sm dark:bg-dark/20 lg:w-[50%]">
         <Button
-          className={`w-full rounded-xl !bg-transparent py-6  text-sm font-medium text-slate-500 hover:!bg-secondary hover:text-white dark:text-white ${
-            active === "language" && "!bg-secondary text-white"
+          className={`w-full rounded-xl !bg-transparent  py-6 text-sm font-medium text-slate-500 hover:!bg-teal-400 hover:text-white dark:text-white ${
+            active === "language" && "!bg-teal-400 text-white"
           }`}
           onClick={() => setActive("language")}
         >
           Language
         </Button>
         <Button
-          className={`w-full rounded-xl !bg-transparent py-6  text-sm font-medium text-slate-500 hover:!bg-secondary hover:text-white dark:text-white ${
-            active === "library" && "!bg-secondary text-white"
+          className={`w-full rounded-xl !bg-transparent  py-6 text-sm font-medium text-slate-500 hover:!bg-teal-400 hover:text-white dark:text-white ${
+            active === "library" && "!bg-teal-400 text-white"
           }`}
           onClick={() => setActive("library")}
         >
           Library
         </Button>
         <Button
-          className={`w-full rounded-xl !bg-transparent py-6  text-sm font-medium text-slate-500 hover:!bg-secondary hover:text-white dark:text-white ${
-            active === "tools" && "!bg-secondary text-white"
+          className={`w-full rounded-xl !bg-transparent  py-6 text-sm font-medium text-slate-500 hover:!bg-teal-400 hover:text-white dark:text-white ${
+            active === "tools" && "!bg-teal-400 text-white"
           }`}
           onClick={() => setActive("tools")}
         >

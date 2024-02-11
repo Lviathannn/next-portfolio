@@ -3,7 +3,7 @@ type Props = {};
 export default function TerminalAbout({}: Props) {
   return (
     <div>
-      <h6 className="text-secondary">About Me :</h6>
+      <h6 className="text-teal-400">About Me :</h6>
       <p>
         I am a junior frontend developer with a primary focus on React.js,
         Next.js, Tailwind CSS, and Framer Motion technologies. I am an

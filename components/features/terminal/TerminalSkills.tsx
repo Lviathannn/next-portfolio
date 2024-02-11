@@ -6,7 +6,7 @@ export default function TerminalSkills({}: Props) {
   return (
     <div>
       <div className="mb-4">
-        <h6 className="mb-2 text-secondary">Language :</h6>
+        <h6 className="mb-2 text-teal-400">Language :</h6>
         <ul>
           <li>HTML</li>
           <li>CSS</li>
@@ -15,7 +15,7 @@ export default function TerminalSkills({}: Props) {
         </ul>
       </div>
       <div className="">
-        <h6 className="mb-2 text-secondary">Library :</h6>
+        <h6 className="mb-2 text-teal-400">Library :</h6>
         <ul>
           <li>Tailwind CSS</li>
           <li>Shadcn UI</li>

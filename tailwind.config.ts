@@ -20,10 +20,6 @@ module.exports = {
       colors: {
         primary: "#0c0d11",
         dark: "#1a1b20 ",
-        secondary: "#55a471",
-        accent_1: "#c8dbb6",
-        accent_2: "#586856",
-        accent_3: "#314abb",
       },
       fontFamily: {
         firacode: ["var(--firaCode)"],
@@ -41,11 +37,20 @@ module.exports = {
           "0%, 100%": { transform: "scale(1)", opacity: 0.2 },
           "50%": { transform: "scale(1.2) ", opacity: 1 },
         },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
+          "70%": { opacity: 1 },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: 0,
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         scale: "scaleUp 10s ease-in-out infinite",
+        "meteor-effect": "meteor 5s linear infinite",
       },
     },
   },

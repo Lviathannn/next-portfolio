@@ -50,7 +50,7 @@ export function NavMenu() {
       </NavigationMenuList>
       <Button
         size="icon"
-        className="ml-1 h-7 w-7 bg-slate-500 hover:bg-slate-500/70 dark:bg-secondary dark:text-white dark:hover:bg-secondary/70"
+        className="ml-1 h-7 w-7 bg-slate-500 hover:bg-slate-500/70 dark:bg-teal-400 dark:text-white dark:hover:bg-teal-400/70"
         onClick={toogle}
       >
         <MoonIcon size={18} />

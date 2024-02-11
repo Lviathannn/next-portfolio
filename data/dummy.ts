@@ -177,3 +177,21 @@ export const projects: ProjectType[] = [
     demo: "https://lviathannn.github.io/pokedex/",
   },
 ];
+
+export const skillLogo = [
+  "skills/html.png",
+  "skills/css.png",
+  "skills/sass.png",
+  "skills/javascript.png",
+  "skills/typescript.png",
+  "skills/tailwindcss.png",
+  "skills/framer.png",
+  "skills/react.png",
+  "skills/redux.png",
+  "skills/nextjs.png",
+  "skills/vscode.png",
+  "skills/figma.png",
+  "skills/git.png",
+  "skills/github.png",
+  "skills/npm.png",
+];

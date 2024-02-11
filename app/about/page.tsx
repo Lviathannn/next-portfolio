@@ -14,7 +14,7 @@ export default function page({}: Props) {
         <SectionTitle
           className="text-[35px] font-semibold text-slate-600 dark:text-white md:text-[45px] md:font-bold"
           title="About Me"
-          tagStyle="text-secondary font-bold"
+          tagStyle="text-teal-400 font-bold"
         />
         <div className="flex w-full flex-col-reverse items-center justify-evenly gap-14 lg:flex-row">
           <div className="w-full max-w-xl">
@@ -30,7 +30,7 @@ export default function page({}: Props) {
             </p>
 
             <div className="mt-5 flex items-end gap-3">
-              <Button className="mt-5 flex items-center gap-2 bg-secondary !text-dark shadow-2xl hover:bg-accent_1 dark:bg-secondary dark:hover:bg-accent_1">
+              <Button className="mt-5 flex items-center gap-2 !bg-teal-400 !text-dark shadow-2xl hover:!bg-teal-500">
                 <a
                   href="/myCV.pdf"
                   download="myCV.pdf"
@@ -45,7 +45,7 @@ export default function page({}: Props) {
                   key={social.name}
                   variant="outline"
                   size="icon"
-                  className="border-none !bg-transparent text-slate-500 hover:!text-secondary dark:text-white"
+                  className="border-none !bg-transparent text-slate-500 hover:!text-teal-400 dark:text-white"
                   aria-label={`Link to ${social.name}`}
                 >
                   <a
@@ -69,8 +69,8 @@ export default function page({}: Props) {
             />
           </div>
         </div>
-        <Blob className="fixed -left-20 -top-10 h-64 w-64 bg-secondary blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
-        <Blob className="fixed -right-20 bottom-0 h-64 w-64 bg-accent_1 blur-[90px] lg:-right-60 lg:h-96 lg:w-96 lg:blur-[120px]" />
+        <Blob className="fixed -left-20 -top-10 h-64 w-64 bg-teal-400 blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
+        <Blob className="fixed -right-20 bottom-0 h-64 w-64 bg-emerald-400 blur-[90px] lg:-right-60 lg:h-96 lg:w-96 lg:blur-[120px]" />
       </section>
     </main>
   );

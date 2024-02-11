@@ -3,7 +3,6 @@ import { cn } from "@/utils/utils";
 type Props = {
   className: string;
 };
-
 export default function Blob({ className }: Props) {
   return (
     <div

@@ -1,6 +1,6 @@
 import { projectCardProps } from "@/types/type";
 import { GithubIcon, Link2 } from "lucide-react";
-import ServeImage from "../ui/ServeImage";
+import ServeImage from "../../ui/ServeImage";
 
 export default function ProjectCard({
   title,
@@ -21,7 +21,7 @@ export default function ProjectCard({
           <a
             href={github}
             target="_blank"
-            className="flex items-center gap-2 hover:text-secondary"
+            className="flex items-center gap-2 hover:text-teal-400"
           >
             <GithubIcon size={18} />
             Repository
@@ -29,7 +29,7 @@ export default function ProjectCard({
           <a
             href={visit}
             target="_blank"
-            className="flex items-center gap-2 hover:text-secondary"
+            className="flex items-center gap-2 hover:text-teal-400"
           >
             <Link2 size={18} />
             Visit

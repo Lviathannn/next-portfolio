@@ -1,7 +1,7 @@
 import { useThemeStore } from "@/utils/store/ThemeStore";
 import { Moon } from "lucide-react";
 import { useShallow } from "zustand/react/shallow";
-import { Switch } from "../ui/switch";
+import { Switch } from "./switch";
 
 type Props = {};
 
