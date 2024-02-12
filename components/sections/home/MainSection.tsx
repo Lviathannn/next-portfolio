@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Blob from "../../ui/Blob";
 import { Download } from "lucide-react";
-import Marquee from "react-fast-marquee";
 type Props = {};
 
 export default function MainSection({}: Props) {
@@ -40,37 +39,35 @@ export default function MainSection({}: Props) {
       {/* Built With */}
       <Blob className="-left-20 -top-10 h-72 w-72 bg-teal-400 blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
       <Blob className="-right-20 top-44 h-64 w-64 bg-emerald-400 blur-[90px]   lg:-right-60 lg:bottom-40 lg:h-96 lg:w-96 lg:blur-[120px]" />
-      <div className="my-10 h-20 max-h-20 w-full">
-        <Marquee className="z-10 lg:mt-10" autoFill speed={50}>
-          <Image
-            src={"/nextjs.svg"}
-            alt="Next JS Logo"
-            width={150}
-            height={150}
-            className="mx-5 opacity-50 invert dark:invert-0 lg:mx-10"
-          />
-          <Image
-            src={"/tailwind.svg"}
-            alt="Tailwind CSS Logo"
-            width={200}
-            height={200}
-            className="mx-5 opacity-50 invert dark:invert-0 lg:mx-10"
-          />
-          <Image
-            src={"/shadcn.svg"}
-            alt="Shadcn UI Logo"
-            width={200}
-            height={200}
-            className="mx-5 opacity-50 invert dark:invert-0 lg:mx-10"
-          />
-          <Image
-            src={"/framer.svg"}
-            alt="Framer Motion Logo"
-            width={200}
-            height={200}
-            className="mx-5 opacity-50 invert dark:invert-0 lg:mx-10"
-          />
-        </Marquee>
+      <div className="mt-10 flex w-full flex-wrap justify-center gap-10 opacity-40 md:my-20">
+        <Image
+          alt="Next js"
+          src="/nextjs.svg"
+          width={200}
+          height={100}
+          className=" w-[130px] scale-90 dark:invert sm:w-[180px]"
+        />
+        <Image
+          alt="Next js"
+          src="/tailwindcss.svg"
+          width={300}
+          height={100}
+          className="w-[170px] scale-90 dark:invert sm:w-[300px]"
+        />
+        <Image
+          alt="Next js"
+          src="/reactquery.svg"
+          width={280}
+          height={100}
+          className="w-[150px] scale-90 dark:invert sm:w-[280px]"
+        />
+        <Image
+          alt="Next js"
+          src="/contentful.svg"
+          width={250}
+          height={100}
+          className="w-[150px] scale-90 dark:invert sm:w-[250px]"
+        />
       </div>
     </section>
   );

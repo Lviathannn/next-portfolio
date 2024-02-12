@@ -10,7 +10,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { aboutLinks } from "@/data/dummy";
+import { aboutLinks } from "@/constants/dummy";
 import { Button } from "../ui/button";
 import { MoonIcon } from "lucide-react";
 import { useThemeStore } from "@/utils/store/ThemeStore";

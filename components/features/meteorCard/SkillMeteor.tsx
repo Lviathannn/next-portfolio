@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { skillLogo } from "@/data/dummy";
+import { skillLogo } from "@/constants/dummy";
 import { MeteorCard } from "./MeteorCard";
 import dynamic from "next/dynamic";
 import CardSkeleton from "@/components/ui/CardSkeleton";
