@@ -3,7 +3,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Link from "next/link";
 import { AlignLeft } from "lucide-react";
 import { useEffect, useState } from "react";
-import { menuItems } from "@/data/dummy";
+import { menuItems } from "@/constants/dummy";
 import { NavMenu } from "./NavMenu";
 import { usePathname } from "next/navigation";
 import useViewportWidth from "@/hooks/useViewportWidth";

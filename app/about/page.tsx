@@ -1,7 +1,7 @@
 import Blob from "@/components/ui/Blob";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { Button } from "@/components/ui/button";
-import { socials } from "@/data/dummy";
+import { socials } from "@/constants/dummy";
 import { Download } from "lucide-react";
 import Image from "next/image";
 import AboutImage from "@/public/aboutme.jpg";

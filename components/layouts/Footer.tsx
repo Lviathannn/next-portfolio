@@ -1,4 +1,4 @@
-import { menuItems, socials } from "@/data/dummy";
+import { menuItems, socials } from "@/constants/dummy";
 import Link from "next/link";
 
 type Props = {};
@@ -68,7 +68,7 @@ export default function Footer({}: Props) {
           Inspired By{" "}
           <Link
             href="https://rezaa.me"
-            className="text-teal-400"
+            className="text-teal-200"
             target="_blank"
           >
             @Rezaa

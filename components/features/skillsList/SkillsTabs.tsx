@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Button } from "../../ui/button";
 import dynamic from "next/dynamic";
-import { skillsLanguage, skillsLibrary, skillsTools } from "@/data/dummy";
+import { skillsLanguage, skillsLibrary, skillsTools } from "@/constants/dummy";
 import SkillSkeleton from "./SkillSkeleton";
 const SkillsCard = dynamic(() => import("./SkillsCard"), {
   loading: () => <SkillSkeleton />,
