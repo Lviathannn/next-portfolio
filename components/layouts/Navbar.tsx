@@ -35,6 +35,7 @@ export default function Navbar({}: Props) {
       document.removeEventListener("scroll", handleScroll);
     };
   }, [pathname]);
+
   useEffect(() => {
     if (darkMode) {
       setTheme("dark");

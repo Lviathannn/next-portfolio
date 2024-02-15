@@ -3,7 +3,7 @@ import { Poppins, Fira_Code } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
-import Theme from "@/components/providers/ThemeProvider";
+import Theme from "@/services/providers/ThemeProvider";
 import { cn } from "@/utils/utils";
 
 const poppins = Poppins({
@@ -60,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         className={cn(
           "overflow-x-hidden bg-slate-100 dark:bg-primary ",

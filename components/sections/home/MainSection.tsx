@@ -8,7 +8,7 @@ type Props = {};
 export default function MainSection({}: Props) {
   return (
     <section className="relative w-full">
-      <div className="relative z-10 flex w-full flex-col items-center justify-between gap-20 lg:flex-row">
+      <article className="relative z-10 flex w-full flex-col items-center justify-between gap-20 lg:flex-row">
         {/* Hero Title */}
         <div className="w-full ">
           <h1 className="text-[45px] font-extrabold leading-none text-slate-700 drop-shadow-[0_0_15px_rgba(200,218,189,0.5)] dark:text-white dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] sm:text-[60px] md:text-[64px] lg:text-[80px]">
@@ -35,7 +35,7 @@ export default function MainSection({}: Props) {
         </div>
         {/* Terminal */}
         <Terminal />
-      </div>
+      </article>
       {/* Built With */}
       <Blob className="-left-20 -top-10 h-72 w-72 bg-teal-400 blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
       <Blob className="-right-20 top-44 h-64 w-64 bg-emerald-400 blur-[90px]   lg:-right-60 lg:bottom-40 lg:h-96 lg:w-96 lg:blur-[120px]" />
@@ -43,30 +43,30 @@ export default function MainSection({}: Props) {
         <Image
           alt="Next js"
           src="/nextjs.svg"
-          width={200}
+          width={180}
           height={100}
-          className=" w-[130px] scale-90 dark:invert sm:w-[180px]"
+          className=" w-[95px] scale-90 dark:invert sm:w-[180px]"
         />
         <Image
-          alt="Next js"
+          alt="Tailwind CSS"
           src="/tailwindcss.svg"
           width={300}
           height={100}
-          className="w-[170px] scale-90 dark:invert sm:w-[300px]"
+          className="w-[160px] scale-90 dark:invert sm:w-[300px]"
         />
         <Image
-          alt="Next js"
+          alt="React Query"
           src="/reactquery.svg"
-          width={280}
+          width={270}
           height={100}
-          className="w-[150px] scale-90 dark:invert sm:w-[280px]"
+          className="w-[140px] scale-90 dark:invert sm:w-[270px]"
         />
         <Image
-          alt="Next js"
+          alt="Contentful"
           src="/contentful.svg"
           width={250}
           height={100}
-          className="w-[150px] scale-90 dark:invert sm:w-[250px]"
+          className="w-[130px] scale-90 dark:invert sm:w-[250px]"
         />
       </div>
     </section>

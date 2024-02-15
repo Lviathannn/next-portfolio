@@ -21,6 +21,11 @@ module.exports = {
         primary: "#0c0d11",
         dark: "#1a1b20 ",
       },
+      gridTemplateColumns: {
+        "bento-lg": "1fr 1fr 1fr 1fr 0.5fr",
+        "bento-md": "1fr 1fr 1fr 1fr 2fr",
+        "bento-sm": "1fr 1fr 1fr 1fr 2.5fr",
+      },
       fontFamily: {
         firacode: ["var(--firaCode)"],
       },
