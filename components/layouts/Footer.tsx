@@ -68,7 +68,7 @@ export default function Footer({}: Props) {
           Inspired By{" "}
           <Link
             href="https://rezaa.me"
-            className="text-teal-200"
+            className="text-teal-600"
             target="_blank"
           >
             @Rezaa

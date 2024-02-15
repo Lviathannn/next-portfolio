@@ -1,4 +1,4 @@
-import { LinksType, ProjectType, SkillType } from "@/types/type";
+import { LinksType, ProjectType, SkillType } from "@/@types/type";
 import {
   Code2,
   Coffee,

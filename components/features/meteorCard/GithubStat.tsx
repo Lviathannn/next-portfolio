@@ -7,14 +7,15 @@ import {
   Star,
 } from "lucide-react";
 import { MeteorCard } from "./MeteorCard";
+
 type Props = {};
-export default function GithubStat({}: Props) {
+export default async function GithubStat({}: Props) {
   return (
     <MeteorCard
       className="relative sm:col-start-4 sm:col-end-6 sm:row-start-1 sm:row-end-2"
       meteorNumber={20}
     >
-      <div className="flex w-full flex-col gap-5 text-white">
+      <article className="z-10 flex w-full flex-col gap-5 px-5 py-8 text-white">
         <div className="text-teal-400">
           <h3 className="text-3xl font-semibold">Github</h3>
           <p className="text-lg text-slate-300">My repository stats</p>
@@ -57,7 +58,7 @@ export default function GithubStat({}: Props) {
             6 Contributed to
           </p>
         </div>
-      </div>
+      </article>
     </MeteorCard>
   );
 }
