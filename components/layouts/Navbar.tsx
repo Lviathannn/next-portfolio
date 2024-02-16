@@ -45,7 +45,7 @@ export default function Navbar({}: Props) {
   }, [darkMode, setTheme]);
 
   return (
-    <nav
+    <header
       className={cn(
         `px-container fixed top-0 z-40 flex w-full  justify-between py-3 text-white transition-colors duration-700 ${
           isAtTop
@@ -62,54 +62,52 @@ export default function Navbar({}: Props) {
       </Link>
       {/* Mobile */}
       {screenWidth < 1024 ? (
-        <div className="">
-          <Sheet open={open}>
-            <SheetTrigger
-              onClick={() => {
-                setOpen(true);
-              }}
-              aria-label="Open Menu"
-              className={`${
-                open ? "hidden" : "block"
-              } text-slate-500 dark:text-white`}
-            >
-              <AlignLeft />
-            </SheetTrigger>
-            <SheetContent className="lg:hidden" setOpen={setOpen}>
-              <ul className="flex flex-col gap-7">
-                {menuItems.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className={`flex items-center gap-5 text-lg text-slate-500 dark:text-white `}
-                    >
-                      <div
-                        className={cn(
-                          `flex h-11 w-11 items-center justify-center rounded-full border-2 border-slate-400 dark:border-white dark:text-white
+        <Sheet open={open}>
+          <SheetTrigger
+            onClick={() => {
+              setOpen(true);
+            }}
+            aria-label="Open Menu"
+            className={`${
+              open ? "hidden" : "block"
+            } text-slate-500 dark:text-white`}
+          >
+            <AlignLeft />
+          </SheetTrigger>
+          <SheetContent className="lg:hidden" setOpen={setOpen}>
+            <ul className="flex flex-col gap-7">
+              {menuItems.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className={`flex items-center gap-5 text-lg text-slate-500 dark:text-white `}
+                  >
+                    <div
+                      className={cn(
+                        `flex h-11 w-11 items-center justify-center rounded-full border-2 border-slate-400 dark:border-white dark:text-white
                           ${
                             pathname === link.href
                               ? "bg-white dark:text-primary"
                               : ""
                           }
                           `,
-                        )}
-                      >
-                        <link.Icon size={18} className={cn("")} />
-                      </div>
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <ThemeButton />
-            </SheetContent>
-          </Sheet>
-        </div>
+                      )}
+                    >
+                      <link.Icon size={18} className={cn("")} />
+                    </div>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ThemeButton />
+          </SheetContent>
+        </Sheet>
       ) : (
         <div className="hidden lg:block">
           <NavMenu />
         </div>
       )}
-    </nav>
+    </header>
   );
 }

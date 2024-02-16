@@ -7,12 +7,12 @@ import Theme from "@/services/providers/ThemeProvider";
 import { cn } from "@/utils/utils";
 
 const poppins = Poppins({
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
 const firaCode = Fira_Code({
-  weight: ["300", "400", "500"],
+  weight: ["400"],
   subsets: ["latin"],
   variable: "--firaCode",
 });
