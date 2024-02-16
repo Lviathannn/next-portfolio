@@ -11,7 +11,7 @@ export default function MainSection({}: Props) {
       <article className="relative z-10 flex w-full flex-col items-center justify-between gap-20 lg:flex-row">
         {/* Hero Title */}
         <div className="w-full ">
-          <h1 className="text-[45px] font-extrabold leading-none text-slate-700 drop-shadow-[0_0_15px_rgba(200,218,189,0.5)] dark:text-white dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] sm:text-[60px] md:text-[64px] lg:text-[80px]">
+          <h1 className="text-[45px] font-bold leading-none text-slate-700 drop-shadow-[0_0_15px_rgba(200,218,189,0.5)] dark:text-white dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] sm:text-[60px] md:text-[64px] lg:text-[80px]">
             Hello,
             <br />
             I’m Asrul{" "}
@@ -39,7 +39,7 @@ export default function MainSection({}: Props) {
       {/* Built With */}
       <Blob className="-left-20 -top-10 h-72 w-72 bg-teal-400 blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
       <Blob className="-right-20 top-44 h-64 w-64 bg-emerald-400 blur-[90px]   lg:-right-60 lg:bottom-40 lg:h-96 lg:w-96 lg:blur-[120px]" />
-      <div className="mt-10 flex w-full flex-wrap justify-center gap-10 opacity-40 md:my-20">
+      <div className="my-20 flex w-full flex-wrap justify-center gap-10 opacity-40">
         <Image
           alt="Next js"
           src="/nextjs.svg"
@@ -52,7 +52,7 @@ export default function MainSection({}: Props) {
           src="/tailwindcss.svg"
           width={300}
           height={100}
-          className="w-[160px] scale-90 dark:invert sm:w-[300px]"
+          className="w-[175px] scale-90 dark:invert sm:w-[300px]"
         />
         <Image
           alt="React Query"
@@ -66,7 +66,7 @@ export default function MainSection({}: Props) {
           src="/contentful.svg"
           width={250}
           height={100}
-          className="w-[130px] scale-90 dark:invert sm:w-[250px]"
+          className="w-[135px] scale-90 dark:invert sm:w-[250px]"
         />
       </div>
     </section>

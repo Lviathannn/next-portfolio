@@ -52,6 +52,7 @@ export function NavMenu() {
         size="icon"
         className="ml-1 h-7 w-7 bg-slate-500 hover:bg-slate-500/70 dark:bg-teal-400 dark:text-white dark:hover:bg-teal-400/70"
         onClick={toogle}
+        aria-label="Toggle Dark Mode"
       >
         <MoonIcon size={18} />
       </Button>

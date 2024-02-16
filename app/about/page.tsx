@@ -17,10 +17,10 @@ export default function page({}: Props) {
           tagStyle="text-teal-400 font-bold"
         />
         <div className="flex w-full flex-col-reverse items-center justify-evenly gap-14 lg:flex-row">
-          <div className="w-full max-w-xl">
-            <h1 className="max-w-lg text-[40px] font-bold leading-none text-slate-600 dark:text-white lg:text-[48px]">
+          <article className="w-full max-w-xl">
+            <header className="max-w-lg text-[40px] font-bold leading-none text-slate-600 dark:text-white lg:text-[48px]">
               Muhammad Asrul Rifa Anwar
-            </h1>
+            </header>
             <p className="mt-5 text-slate-500 dark:text-slate-300">
               I am a junior frontend developer with a primary focus on React.js,
               Next.js, Tailwind CSS, and Framer Motion technologies. I am an
@@ -58,7 +58,7 @@ export default function page({}: Props) {
                 </Button>
               ))}
             </div>
-          </div>
+          </article>
           <div className="relative aspect-square w-full max-w-xs overflow-hidden rounded-2xl object-contain lg:max-w-sm">
             <Image
               src={AboutImage}
