@@ -2,7 +2,7 @@ import {
   getWakaTimeLeaderBoard,
   getWakaTimeWeekStat,
 } from "@/services/api/wakatime";
-import { MeteorCard } from "./MeteorCard";
+import { GridCard } from "./GridCard";
 
 type Props = {};
 
@@ -17,7 +17,7 @@ export default async function WakatimeStat({}: Props) {
   const dailyAverageMinute = Math.floor((dailyAverage % 3600) / 60) || 0;
 
   return (
-    <MeteorCard
+    <GridCard
       className="relative sm:col-start-4 sm:col-end-6 sm:row-start-2 sm:row-end-3"
       meteorNumber={20}
     >
@@ -69,6 +69,6 @@ export default async function WakatimeStat({}: Props) {
           </div>
         </div>
       </article>
-    </MeteorCard>
+    </GridCard>
   );
 }
