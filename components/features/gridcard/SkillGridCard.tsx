@@ -1,17 +1,17 @@
 import React, { Suspense } from "react";
 import { skillLogo } from "@/constants/dummy";
-import { MeteorCard } from "./MeteorCard";
 import dynamic from "next/dynamic";
 import CardSkeleton from "@/components/ui/CardSkeleton";
+import { GridCard } from "./GridCard";
 const SkillCard = dynamic(() => import("../../ui/SkillCard"), {
   loading: () => <CardSkeleton />,
 });
 
 type Props = {};
 
-export default function SkillMeteor({}: Props) {
+export default function SkillGridCard({}: Props) {
   return (
-    <MeteorCard
+    <GridCard
       className="relative max-h-full sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-3"
       meteorNumber={50}
     >
@@ -31,6 +31,6 @@ export default function SkillMeteor({}: Props) {
           ))}
         </div>
       </div>
-    </MeteorCard>
+    </GridCard>
   );
 }

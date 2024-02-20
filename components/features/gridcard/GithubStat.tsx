@@ -6,12 +6,12 @@ import {
   GitPullRequest,
   Star,
 } from "lucide-react";
-import { MeteorCard } from "./MeteorCard";
+import { GridCard } from "./GridCard";
 
 type Props = {};
 export default async function GithubStat({}: Props) {
   return (
-    <MeteorCard
+    <GridCard
       className="relative sm:col-start-4 sm:col-end-6 sm:row-start-1 sm:row-end-2"
       meteorNumber={20}
     >
@@ -59,6 +59,6 @@ export default async function GithubStat({}: Props) {
           </p>
         </div>
       </article>
-    </MeteorCard>
+    </GridCard>
   );
 }
