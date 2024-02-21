@@ -1,4 +1,4 @@
-import { projectCardProps } from "@/types/type";
+import { projectCardProps } from "@/@types/type";
 import { GithubIcon, Link2 } from "lucide-react";
 import ServeImage from "../../ui/ServeImage";
 

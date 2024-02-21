@@ -1,12 +1,12 @@
 import { Progress } from "@/components/ui/progress";
-import { MeteorCard } from "./MeteorCard";
+import { GridCard } from "./GridCard";
 
 type Props = {};
 
 export default function LeetcodeStat({}: Props) {
   return (
-    <MeteorCard className="relative w-full lg:w-[80%] " meteorNumber={50}>
-      <div className="w-full">
+    <GridCard className="relative w-full xl:w-[80%] ">
+      <article className="z-10 w-full px-5 py-8">
         <h1 className="text-2xl font-semibold text-teal-400">Leetcode</h1>
         <p className="flex items-center gap-2 text-slate-300">
           Rank
@@ -67,7 +67,7 @@ export default function LeetcodeStat({}: Props) {
             />
           </div>
         </div>
-      </div>
-    </MeteorCard>
+      </article>
+    </GridCard>
   );
 }

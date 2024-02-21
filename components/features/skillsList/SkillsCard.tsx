@@ -1,4 +1,4 @@
-import { SkillCardProps } from "@/types/type";
+import { SkillCardProps } from "@/@types/type";
 import Image from "next/image";
 
 export default function SkillCard({ title, logo }: SkillCardProps) {
