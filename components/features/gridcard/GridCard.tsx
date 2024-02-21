@@ -2,11 +2,9 @@ import React from "react";
 
 export function GridCard({
   className,
-  meteorNumber,
   children,
 }: {
   className?: string;
-  meteorNumber: number;
   children?: React.ReactNode;
 }) {
   return (
