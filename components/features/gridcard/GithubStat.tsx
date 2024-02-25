@@ -8,18 +8,19 @@ import {
 } from "lucide-react";
 import { GridCard } from "./GridCard";
 import { getClient } from "@/services/graphql/ApolloClient";
-import { GET_GH_STATS } from "@/services/graphql/github-gql";
+import { GET_GITHUB_STATS } from "@/services/graphql/github-gql";
 
 type Props = {};
 export default async function GithubStat({}: Props) {
   const { data } = await getClient().query<GitHubStats>({
-    query: GET_GH_STATS,
+    query: GET_GITHUB_STATS,
     variables: { login: process.env.GITHUB_USERNAME },
   });
 
-  const stargazers = data?.user?.repositories?.nodes
-    .filter((repo) => repo.stargazers.totalCount !== 0)
-    .reduce((prev, curr) => prev + curr.stargazers.totalCount, 0);
+  const stargazers = data?.user?.repositories?.nodes.reduce(
+    (prev, curr) => prev + curr.stargazers.totalCount,
+    0,
+  );
 
   const currentYear = new Date().getFullYear();
 
