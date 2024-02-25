@@ -27,7 +27,7 @@ export default async function LeetcodeStat({}: Props) {
   return (
     <GridCard className="relative w-full xl:w-[80%] ">
       <article className="z-10 w-full px-5 py-8">
-        <h1 className="text-2xl font-semibold text-teal-400">Leetcode</h1>
+        <h1 className="text-accent_primary text-2xl font-semibold">Leetcode</h1>
         <p className="flex items-center gap-2 text-slate-300">
           Rank
           <strong className="flex gap-1 text-lg text-white">

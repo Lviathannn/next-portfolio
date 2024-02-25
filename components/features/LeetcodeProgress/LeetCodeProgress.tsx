@@ -27,7 +27,7 @@ export default function LeetCodeProgress({ difficulty, solved, total }: Props) {
         }`}
         childClassName={`${
           difficulty === "Easy"
-            ? "bg-teal-400"
+            ? "bg-accent_primary"
             : difficulty === "Medium"
               ? "bg-yellow-400"
               : "bg-rose-400"

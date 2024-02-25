@@ -6,6 +6,7 @@ import Footer from "@/components/layouts/Footer";
 import Theme from "@/services/providers/ThemeProvider";
 import { cn } from "@/utils/utils";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -20,11 +21,11 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s / asrul",
-    default: "asrul",
+    template: "%s / Asrul",
+    default: "Asrul",
   },
   description:
-    "I am a junior frontend developer with a primary focus on React.js, Next.js, Tailwind CSS, and Framer Motion technologies. I am an individual who is diligent and passionate about the learning process, with the ultimate goal of realizing my aspirations as a professional frontend developer.",
+    "Frontend developer with a primary focus on React.js, Next.js, Tailwind CSS, and Framer Motion technologies. I am an individual who is diligent and passionate about the learning process, with the ultimate goal of realizing my aspirations as a professional frontend developer.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_BASE_URL || "",
     "https://asrul.tech/",
@@ -35,15 +36,15 @@ export const metadata: Metadata = {
     type: "website",
     images: "/opengraph.png",
     title: {
-      template: "%s / asrul",
-      default: "asrul",
+      template: "%s / Asrul",
+      default: "Asrul",
     },
   },
   twitter: {
     images: "/opengraph.png",
     title: {
-      template: "%s / asrul",
-      default: "asrul",
+      template: "%s / Asrul",
+      default: "Asrul",
     },
   },
 };
@@ -73,6 +74,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Analytics />
+          <SpeedInsights />
           <div className="fixed bottom-0 left-0 right-0 top-0 -z-10 bg-[url('/grid.svg')]  opacity-[15%] invert dark:invert-0" />
           <Footer />
         </Theme>

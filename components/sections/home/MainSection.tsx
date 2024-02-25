@@ -1,6 +1,5 @@
 import Terminal from "@/components/features/terminal/Terminal";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Blob from "../../ui/Blob";
 import { Download } from "lucide-react";
 import Brand from "@/components/features/brand/Brand";
@@ -27,7 +26,7 @@ export default function MainSection({}: Props) {
             Transforming Pixels into Poetry, Conjuring Captivating Web Journeys
             as a Front-End Wizard
           </p>
-          <Button className="!dark:text-dark mt-5 flex items-center gap-2 bg-teal-400 shadow-2xl hover:bg-teal-400 dark:bg-teal-400 dark:hover:bg-teal-400">
+          <Button className="!dark:text-dark hover:!bg-accent_hover mt-5 flex items-center gap-2 !bg-accent_primary shadow-2xl">
             <a href="/myCV.pdf" download="myCV.pdf" className="flex gap-3">
               Download CV
               <Download size={18} />
@@ -38,8 +37,8 @@ export default function MainSection({}: Props) {
         <Terminal />
       </article>
       {/* Built With */}
-      <Blob className="-left-20 -top-10 h-72 w-72 bg-teal-400 blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
-      <Blob className="-right-20 top-44 h-64 w-64 bg-emerald-400 blur-[90px]   lg:-right-60 lg:bottom-40 lg:h-96 lg:w-96 lg:blur-[120px]" />
+      <Blob className="-left-20 -top-10 h-72 w-72 bg-accent_primary blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
+      <Blob className="-right-20 top-44 h-64 w-64 bg-accent_secondary blur-[90px]   lg:-right-60 lg:bottom-40 lg:h-96 lg:w-96 lg:blur-[120px]" />
       <Brand />
     </section>
   );
