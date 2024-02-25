@@ -55,10 +55,10 @@ export default function Navbar({}: Props) {
       )}
     >
       <Link href={"/"} className="relative flex items-center justify-center">
-        <h2 className="text-xl font-semibold text-slate-500 before:absolute before:-left-1 before:-z-30 before:h-3 before:w-3 before:rounded-full before:bg-teal-400 dark:text-white">
+        <h2 className="before:bg-accent_primary text-xl font-semibold text-slate-500 before:absolute before:-left-1 before:-z-30 before:h-3 before:w-3 before:rounded-full dark:text-white">
           Asrul
         </h2>
-        <span className="font-bold text-teal-400">.()</span>
+        <span className="text-accent_primary font-bold">.()</span>
       </Link>
       {/* Mobile */}
       {screenWidth < 1024 ? (

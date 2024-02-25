@@ -27,7 +27,7 @@ export default async function GithubStat({}: Props) {
   return (
     <GridCard className="relative sm:col-start-4 sm:col-end-6 sm:row-start-1 sm:row-end-2">
       <article className="z-10 flex w-full flex-col gap-5 px-5 py-8 text-white">
-        <div className="text-teal-400">
+        <div className="text-accent_primary">
           <h3 className="text-3xl font-semibold">Github</h3>
           <p className="text-lg text-slate-300">My repository stats</p>
         </div>

@@ -19,7 +19,7 @@ export default async function WakatimeStat({}: Props) {
   return (
     <GridCard className="relative sm:col-start-4 sm:col-end-6 sm:row-start-2 sm:row-end-3">
       <article className="z-10 flex h-full w-full flex-col justify-between gap-5 px-5 py-8 text-white">
-        <div className="text-teal-400">
+        <div className="text-accent_primary">
           <h3 className="text-3xl font-semibold">Wakatime</h3>
           <p className="text-lg text-slate-300">Last week Activity</p>
         </div>

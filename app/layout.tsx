@@ -21,11 +21,11 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s / asrul",
-    default: "asrul",
+    template: "%s / Asrul",
+    default: "Asrul",
   },
   description:
-    "I am a junior frontend developer with a primary focus on React.js, Next.js, Tailwind CSS, and Framer Motion technologies. I am an individual who is diligent and passionate about the learning process, with the ultimate goal of realizing my aspirations as a professional frontend developer.",
+    "Frontend developer with a primary focus on React.js, Next.js, Tailwind CSS, and Framer Motion technologies. I am an individual who is diligent and passionate about the learning process, with the ultimate goal of realizing my aspirations as a professional frontend developer.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_BASE_URL || "",
     "https://asrul.tech/",
@@ -36,15 +36,15 @@ export const metadata: Metadata = {
     type: "website",
     images: "/opengraph.png",
     title: {
-      template: "%s / asrul",
-      default: "asrul",
+      template: "%s / Asrul",
+      default: "Asrul",
     },
   },
   twitter: {
     images: "/opengraph.png",
     title: {
-      template: "%s / asrul",
-      default: "asrul",
+      template: "%s / Asrul",
+      default: "Asrul",
     },
   },
 };

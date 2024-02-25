@@ -14,7 +14,7 @@ export default function page({}: Props) {
         <SectionTitle
           className="text-[35px] font-semibold text-slate-600 dark:text-white md:text-[45px] md:font-bold"
           title="About Me"
-          tagStyle="text-teal-400 font-bold"
+          tagStyle="text-accent_primary font-bold"
         />
         <div className="flex w-full flex-col-reverse items-center justify-evenly gap-14 lg:flex-row">
           <article className="w-full max-w-xl">
@@ -22,7 +22,7 @@ export default function page({}: Props) {
               Muhammad Asrul Rifa Anwar
             </header>
             <p className="mt-5 text-slate-500 dark:text-slate-300">
-              I am a junior frontend developer with a primary focus on React.js,
+              I am a frontend developer with a primary focus on React.js,
               Next.js, Tailwind CSS, and Framer Motion technologies. I am an
               individual who is diligent and passionate about the learning
               process, with the ultimate goal of realizing my aspirations as a
@@ -30,7 +30,7 @@ export default function page({}: Props) {
             </p>
 
             <div className="mt-5 flex items-end gap-3">
-              <Button className="mt-5 flex items-center gap-2 !bg-teal-400 !text-dark shadow-2xl hover:!bg-teal-500">
+              <Button className="hover:!bg-accent_hover mt-5 flex items-center gap-2 !bg-accent_primary !text-dark shadow-2xl">
                 <a
                   href="/myCV.pdf"
                   download="myCV.pdf"
@@ -45,7 +45,7 @@ export default function page({}: Props) {
                   key={social.name}
                   variant="outline"
                   size="icon"
-                  className="border-none !bg-transparent text-slate-500 hover:!text-teal-400 dark:text-white"
+                  className="border-none !bg-transparent text-slate-500 hover:!text-accent_primary dark:text-white"
                   aria-label={`Link to ${social.name}`}
                 >
                   <a
@@ -69,8 +69,8 @@ export default function page({}: Props) {
             />
           </div>
         </div>
-        <Blob className="fixed -left-20 -top-10 h-64 w-64 bg-teal-400 blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
-        <Blob className="fixed -right-20 bottom-0 h-64 w-64 bg-emerald-400 blur-[90px] lg:-right-60 lg:h-96 lg:w-96 lg:blur-[120px]" />
+        <Blob className="fixed -left-20 -top-10 h-64 w-64 bg-accent_primary blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
+        <Blob className="fixed -right-20 bottom-0 h-64 w-64 bg-accent_secondary blur-[90px] lg:-right-60 lg:h-96 lg:w-96 lg:blur-[120px]" />
       </section>
     </main>
   );
