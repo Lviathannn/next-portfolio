@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
-export const GET_GH_STATS = gql`
-  query Stats($login: String!) {
+export const GET_GITHUB_STATS = gql`
+  query Stats($login: String!) @api(name: gitHub) {
     user(login: $login) {
       contributionsCollection {
         totalCommitContributions
