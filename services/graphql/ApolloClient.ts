@@ -1,20 +1,39 @@
-import { gitHubUrl } from "@/constants/baseURL";
-import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
+import { gitHubUrl, leetCodeUrl } from "@/constants/baseURL";
+import {
+  ApolloClient,
+  ApolloLink,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
 import { registerApolloClient } from "@apollo/experimental-nextjs-app-support/rsc";
+import { MultiAPILink } from "@habx/apollo-multi-endpoint-link";
 
 export const { getClient } = registerApolloClient(() => {
   return new ApolloClient({
-    link: new HttpLink({
-      headers: {
-        Authorization: `Bearer ${process.env.GITHUB_API_KEY}`,
-      },
-      uri: gitHubUrl,
-      fetchOptions: {
-        next: {
-          revalidate: 60,
+    link: ApolloLink.from([
+      new MultiAPILink({
+        endpoints: {
+          gitHub: gitHubUrl,
+          leetCode: leetCodeUrl,
         },
-      },
-    }),
+        getContext: (endpoint) => {
+          if (endpoint === "gitHub") {
+            return {
+              headers: {
+                authorization: `Bearer ${process.env.GITHUB_API_KEY}`,
+              },
+            };
+          }
+          return {};
+        },
+        createHttpLink: () =>
+          createHttpLink({
+            fetchOptions: {
+              next: { revalidate: 60 },
+            },
+          }),
+      }),
+    ]),
     cache: new InMemoryCache(),
   });
 });
