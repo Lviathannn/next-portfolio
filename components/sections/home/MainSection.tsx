@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Blob from "../../ui/Blob";
 import { Download } from "lucide-react";
+import Brand from "@/components/features/brand/Brand";
 type Props = {};
 
 export default function MainSection({}: Props) {
@@ -39,36 +40,7 @@ export default function MainSection({}: Props) {
       {/* Built With */}
       <Blob className="-left-20 -top-10 h-72 w-72 bg-teal-400 blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
       <Blob className="-right-20 top-44 h-64 w-64 bg-emerald-400 blur-[90px]   lg:-right-60 lg:bottom-40 lg:h-96 lg:w-96 lg:blur-[120px]" />
-      <div className="my-20 flex w-full flex-wrap justify-center gap-10 opacity-40">
-        <Image
-          alt="Next js"
-          src="/nextjs.svg"
-          width={180}
-          height={100}
-          className=" w-[95px] scale-90 dark:invert sm:w-[180px]"
-        />
-        <Image
-          alt="Tailwind CSS"
-          src="/tailwindcss.svg"
-          width={300}
-          height={100}
-          className="w-[175px] scale-90 dark:invert sm:w-[300px]"
-        />
-        <Image
-          alt="React Query"
-          src="/reactquery.svg"
-          width={270}
-          height={100}
-          className="w-[140px] scale-90 dark:invert sm:w-[270px]"
-        />
-        <Image
-          alt="Contentful"
-          src="/contentful.svg"
-          width={250}
-          height={100}
-          className="w-[135px] scale-90 dark:invert sm:w-[250px]"
-        />
-      </div>
+      <Brand />
     </section>
   );
 }
