@@ -6,6 +6,7 @@ import Footer from "@/components/layouts/Footer";
 import Theme from "@/services/providers/ThemeProvider";
 import { cn } from "@/utils/utils";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -73,6 +74,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Analytics />
+          <SpeedInsights />
           <div className="fixed bottom-0 left-0 right-0 top-0 -z-10 bg-[url('/grid.svg')]  opacity-[15%] invert dark:invert-0" />
           <Footer />
         </Theme>
