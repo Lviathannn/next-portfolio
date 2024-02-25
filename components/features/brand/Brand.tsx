@@ -8,7 +8,7 @@ type Props = {};
 
 export default function Brand({}: Props) {
   return (
-    <div className="my-20 flex w-full flex-wrap justify-evenly gap-10 opacity-40 grayscale invert">
+    <div className="my-20 flex w-full flex-wrap justify-evenly gap-10 opacity-30 grayscale dark:opacity-40 dark:invert">
       <Image alt="Next js" src={Nextjs} />
       <Image alt="Tailwind CSS" src={TailwindCSS} />
       <Image alt="Apollo Client" src={Apollo} className="scale-95" />

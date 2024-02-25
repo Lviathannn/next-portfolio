@@ -5,13 +5,13 @@ type Props = {};
 export default function TerminalProjects({}: Props) {
   return (
     <div className="mb-4">
-      <h6 className="mb-2 text-teal-400">Projects :</h6>
+      <h6 className="text-accent_primary mb-2">Projects :</h6>
       <ul>
         <li>
           <Link
             href="https://muhammadasrul-v1.vercel.app/"
             target="_blank"
-            className="hover:text-teal-400"
+            className="hover:text-accent_primary"
           >
             Old Portfolio
           </Link>
@@ -20,7 +20,7 @@ export default function TerminalProjects({}: Props) {
           <Link
             href="https://my-alquran-id.vercel.app/"
             target="_blank"
-            className="hover:text-teal-400"
+            className="hover:text-accent_primary"
           >
             My Qur{"'"}an
           </Link>
@@ -29,7 +29,7 @@ export default function TerminalProjects({}: Props) {
           <Link
             href="https://lviathannn.github.io/pokedex/"
             target="_blank"
-            className="hover:text-teal-400"
+            className="hover:text-accent_primary"
           >
             Pokedex
           </Link>
@@ -38,7 +38,7 @@ export default function TerminalProjects({}: Props) {
           <Link
             href="https://sabreena-landingpages.vercel.app/"
             target="_blank"
-            className="hover:text-teal-400"
+            className="hover:text-accent_primary"
           >
             Sabreena Landing Pages
           </Link>
@@ -47,7 +47,7 @@ export default function TerminalProjects({}: Props) {
           <Link
             href="https://www.mediapergerakandarussalamciamis.or.id/"
             target="_blank"
-            className="hover:text-teal-400"
+            className="hover:text-accent_primary"
           >
             PMII Website
           </Link>
@@ -56,7 +56,7 @@ export default function TerminalProjects({}: Props) {
           <Link
             href="https://www.azizahmukarromah.online/"
             target="_blank"
-            className="hover:text-teal-400"
+            className="hover:text-accent_primary"
           >
             Legislative Candidate Website
           </Link>

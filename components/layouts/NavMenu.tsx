@@ -50,7 +50,7 @@ export function NavMenu() {
       </NavigationMenuList>
       <Button
         size="icon"
-        className="ml-1 h-7 w-7 bg-slate-500 hover:bg-slate-500/70 dark:bg-teal-400 dark:text-white dark:hover:bg-teal-400/70"
+        className="dark:hover:bg-accent_hover ml-1 h-7 w-7 bg-slate-500 hover:bg-slate-500/70 dark:bg-accent_primary dark:text-white"
         onClick={toogle}
         aria-label="Toggle Dark Mode"
       >

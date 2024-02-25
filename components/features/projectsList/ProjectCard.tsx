@@ -21,7 +21,7 @@ export default function ProjectCard({
           <a
             href={github}
             target="_blank"
-            className="flex items-center gap-2 hover:text-teal-400"
+            className="hover:text-accent_primary flex items-center gap-2"
           >
             <GithubIcon size={18} />
             Repository
@@ -29,7 +29,7 @@ export default function ProjectCard({
           <a
             href={visit}
             target="_blank"
-            className="flex items-center gap-2 hover:text-teal-400"
+            className="hover:text-accent_primary flex items-center gap-2"
           >
             <Link2 size={18} />
             Visit
