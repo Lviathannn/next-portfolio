@@ -4,13 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "aceternity.com",
-        port: "",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "github-readme-stats.vercel.app",
+        hostname: "media.graphassets.com",
         port: "",
         pathname: "/**",
       },
