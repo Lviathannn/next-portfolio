@@ -2,9 +2,13 @@ import SkillsTabs from "@/components/features/skillsList/SkillsTabs";
 import Blob from "@/components/ui/Blob";
 import SectionTitle from "@/components/ui/SectionTitle";
 
-type Props = {};
+type Props = {
+  searchParams: {
+    filter: "language" | "library" | "tools";
+  };
+};
 
-export default function page({}: Props) {
+export default function page({ searchParams }: Props) {
   return (
     <main className="px-container py-container min-h-screen">
       <section className="flex flex-col items-center gap-16">
@@ -13,9 +17,9 @@ export default function page({}: Props) {
           title="My Skills"
           tagStyle="text-accent_primary font-bold"
         />
-        <SkillsTabs />
-        <Blob className="bg-accent_primary fixed -left-20 -top-10 h-64 w-64 blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
-        <Blob className="bg-accent_secondary fixed -right-20 bottom-0 h-64 w-64 blur-[90px]   lg:-right-60 lg:h-96 lg:w-96 lg:blur-[120px]" />
+        <SkillsTabs filter={searchParams.filter || "language"} />
+        <Blob className="fixed -left-20 -top-10 h-64 w-64 bg-accent_primary blur-[90px] lg:-left-44 lg:h-96 lg:w-96 lg:blur-[120px]" />
+        <Blob className="fixed -right-20 bottom-0 h-64 w-64 bg-accent_secondary blur-[90px]   lg:-right-60 lg:h-96 lg:w-96 lg:blur-[120px]" />
       </section>
     </main>
   );

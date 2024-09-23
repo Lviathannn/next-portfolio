@@ -10,6 +10,7 @@ export default function MainSection({}: Props) {
     <section className="relative w-full">
       <article className="relative z-10 flex w-full flex-col items-center justify-between gap-20 lg:flex-row">
         {/* Hero Title */}
+
         <div className="w-full ">
           <h1 className="text-[45px] font-bold leading-none text-slate-700 drop-shadow-[0_0_15px_rgba(200,218,189,0.5)] dark:text-white dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] sm:text-[60px] md:text-[64px] lg:text-[80px]">
             Hello,
@@ -26,7 +27,7 @@ export default function MainSection({}: Props) {
             Transforming Pixels into Poetry, Conjuring Captivating Web Journeys
             as a Front-End Wizard
           </p>
-          <Button className="!dark:text-dark hover:!bg-accent_hover mt-5 flex items-center gap-2 !bg-accent_primary shadow-2xl">
+          <Button className="!dark:text-dark mt-5 flex items-center gap-2 !bg-accent_primary shadow-2xl hover:!bg-accent_hover">
             <a href="/myCV.pdf" download="myCV.pdf" className="flex gap-3">
               Download CV
               <Download size={18} />

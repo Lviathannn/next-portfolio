@@ -14,9 +14,7 @@
   @apply w-[0px];
 }
 
-#terminal::-webkit-scrollbar {
-  @apply w-[5px] bg-transparent;
-}
+
 
 #skill::-webkit-scrollbar {
   @apply w-[5px];
@@ -28,6 +26,10 @@
 
 #skill::-webkit-scrollbar-thumb {
   @apply bg-accent_primary;
+}
+
+#terminal::-webkit-scrollbar {
+  @apply w-[5px] bg-transparent;
 }
 
 #terminal::-webkit-scrollbar-track {

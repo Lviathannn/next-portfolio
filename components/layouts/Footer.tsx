@@ -8,7 +8,7 @@ export default function Footer({}: Props) {
     <footer className="px-container relative z-20 flex flex-col gap-10 bg-slate-100/50 py-10 text-white dark:bg-primary/70 lg:py-14">
       <div className=" flex flex-col justify-between gap-10 lg:flex-row">
         <div className="flex flex-col">
-          <h2 className="text-primary-text text-accent_primary text-xl font-semibold">
+          <h2 className="text-primary-text text-xl font-semibold text-accent_primary">
             Muhammad Asrul Rifa Anwar
           </h2>
           <h3 className="text-primary-text text-medium text-slate-500 dark:text-white">
@@ -22,7 +22,7 @@ export default function Footer({}: Props) {
           <div className="text-primary-text flex flex-col gap-3 text-slate-500 dark:text-white">
             {menuItems.map((item, index) => (
               <Link
-                className="hover:text-accent_primary flex cursor-pointer items-center gap-2 font-normal"
+                className="flex cursor-pointer items-center gap-2 font-normal hover:text-accent_primary"
                 href={`${item.href}`}
                 key={index}
               >
@@ -39,7 +39,7 @@ export default function Footer({}: Props) {
           <div className="text-primary-text flex flex-col gap-3 text-slate-500 dark:text-white">
             {socials.map((item, index) => (
               <Link
-                className="hover:text-accent_primary flex cursor-pointer items-center gap-2 font-normal"
+                className="flex cursor-pointer items-center gap-2 font-normal hover:text-accent_primary"
                 href={`${item.href}`}
                 key={index}
                 target="_blank"

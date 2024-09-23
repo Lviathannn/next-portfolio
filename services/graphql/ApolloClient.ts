@@ -1,4 +1,4 @@
-import { gitHubUrl, leetCodeUrl } from "@/constants/baseURL";
+import { gitHubUrl, hygraphUrl, leetCodeUrl } from "@/constants/baseURL";
 import {
   ApolloClient,
   ApolloLink,
@@ -13,6 +13,7 @@ export const { getClient } = registerApolloClient(() => {
     link: ApolloLink.from([
       new MultiAPILink({
         endpoints: {
+          hygraph: hygraphUrl,
           gitHub: gitHubUrl,
           leetCode: leetCodeUrl,
         },
@@ -24,8 +25,10 @@ export const { getClient } = registerApolloClient(() => {
               },
             };
           }
+
           return {};
         },
+        httpSuffix: "",
         createHttpLink: () =>
           createHttpLink({
             fetchOptions: {
