@@ -13,7 +13,6 @@ const SkillsCard = dynamic(
 export default async function LanguageSkills() {
   const { data } = await getClient().query<SkillsData>({
     query: GET_LANGUAGE_SKILL,
-    variables: { categories: "Language" },
   });
 
   return (
